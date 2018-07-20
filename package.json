@@ -47,6 +47,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "prettier": "prettier --write '**/*.{js,json,jsx,md}'",
-    "eslint": "eslint --ext .js,.jsx --ignore-pattern public ."
+    "eslint": "eslint --ext .js,.jsx --ignore-pattern public .",
+    "eslint:fix": "eslint --ext .js,.jsx --ignore-pattern public ."
   }
 }
