@@ -47,9 +47,10 @@
     "prettier": "^1.12.0"
   },
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "dev": "npm-run-all -p develop prettier:watch eslint:watch",
+    "build": "npm-run-all -s prettier eslint gatsby:build",
+    "dev": "npm-run-all -p gatsby:develop prettier:watch eslint:watch",
+    "gatsby:build": "gatsby build",
+    "gatsby:develop": "gatsby develop",
     "prettier": "prettier --write \"{,!(.cache|public)/**/}*.{js,json,jsx,md}\"",
     "prettier:watch": "onchange \"{,!(.cache|public)/**/}*.{js,json,jsx,md}\" -- prettier --write {{changed}}",
     "eslint": "eslint --ext .js,.jsx .",
