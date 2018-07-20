@@ -2,7 +2,7 @@
 *.log
 npm-debug.log.*
 node_modules/
-public
+public/
 .gatsby-context.js
 .DS_Store
 .intermediate-representation/

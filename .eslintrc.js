@@ -12,4 +12,9 @@ module.exports = {
       jsx: true,
     },
   },
+  rules: {
+    "react/prefer-stateless-function": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/no-danger": "off",
+  },
 };
