@@ -4,6 +4,10 @@
   "description": "Nop's personal website",
   "author": "Nop Jiarathanakul <nop@iamnop.com>",
   "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
   "dependencies": {
     "gatsby": "next",
     "gatsby-plugin-feed": "next",
@@ -26,8 +30,8 @@
     "react-dom": "^16.3.2",
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.13",
-    "typeface-merriweather": "0.0.43",
-    "typeface-montserrat": "0.0.43",
+    "typeface-merriweather": "0.0.54",
+    "typeface-montserrat": "0.0.54",
     "typography": "^0.16.17",
     "typography-theme-wordpress-2016": "^0.15.10"
   },
