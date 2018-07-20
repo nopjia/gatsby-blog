@@ -4,7 +4,7 @@ module.exports = {
     es6: true,
   },
   plugins: ["react"],
-  extends: ["plugin:prettier/recommended"],
+  extends: ["airbnb", "plugin:prettier/recommended"],
   parserOptions: {
     sourceType: "module",
     ecmaFeatures: {
