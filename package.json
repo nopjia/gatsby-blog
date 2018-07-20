@@ -9,6 +9,7 @@
     "url": ""
   },
   "dependencies": {
+    "bluebird": "^3.5.1",
     "gatsby": "next",
     "gatsby-plugin-feed": "next",
     "gatsby-plugin-google-analytics": "next",
@@ -48,10 +49,11 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "dev": "npm-run-all -p develop prettier:watch",
+    "dev": "npm-run-all -p develop prettier:watch eslint:watch",
     "prettier": "prettier --write \"{,!(.cache|public)/**/}*.{js,json,jsx,md}\"",
     "prettier:watch": "onchange \"{,!(.cache|public)/**/}*.{js,json,jsx,md}\" -- prettier --write {{changed}}",
     "eslint": "eslint --ext .js,.jsx .",
-    "eslint:fix": "eslint --ext .js,.jsx ."
+    "eslint:fix": "eslint --ext .js,.jsx .",
+    "eslint:watch": "onchange \"{,!(.cache|public)/**/}*.{js,jsx}\" -- eslint {{changed}}"
   }
 }

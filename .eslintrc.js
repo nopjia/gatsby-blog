@@ -12,9 +12,12 @@ module.exports = {
       jsx: true,
     },
   },
+  globals: {
+    __PATH_PREFIX__: false,
+  },
   rules: {
-    "react/prefer-stateless-function": "off",
     "react/jsx-one-expression-per-line": "off",
     "react/no-danger": "off",
+    "react/prop-types": "off",
   },
 };

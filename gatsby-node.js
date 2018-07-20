@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 const _ = require("lodash");
 const Promise = require("bluebird");
 const path = require("path");
