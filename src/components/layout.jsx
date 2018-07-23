@@ -10,16 +10,7 @@ export default ({ location, children }) => {
   if (location.pathname === rootPath) {
     header = (
       <h1>
-        <Link
-          style={{
-            boxShadow: "none",
-            textDecoration: "none",
-            color: "inherit",
-          }}
-          to="/"
-        >
-          Gatsby Starter Blog
-        </Link>
+        <Link to="/">Gatsby Starter Blog</Link>
       </h1>
     );
   } else {
@@ -35,7 +26,7 @@ export default ({ location, children }) => {
       style={{
         marginLeft: "auto",
         marginRight: "auto",
-        maxWidth: rhythm(24),
+        maxWidth: rhythm(30),
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >

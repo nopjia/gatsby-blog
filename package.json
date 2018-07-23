@@ -31,10 +31,8 @@
     "react-dom": "^16.3.2",
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.13",
-    "typeface-merriweather": "0.0.54",
-    "typeface-montserrat": "0.0.54",
-    "typography": "^0.16.17",
-    "typography-theme-kirkham": "^0.16.3"
+    "typeface-vollkorn": "0.0.54",
+    "typography": "^0.16.17"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
@@ -50,7 +48,7 @@
     "build": "npm-run-all -s prettier eslint gatsby:build",
     "dev": "npm-run-all -p gatsby:develop prettier:watch eslint:watch",
     "gatsby:build": "gatsby build",
-    "gatsby:develop": "gatsby develop",
+    "gatsby:develop": "gatsby develop --port 9000",
     "prettier": "prettier --write \"{,!(.cache|public)/**/}*.{js,json,jsx,md}\"",
     "prettier:watch": "onchange \"{,!(.cache|public)/**/}*.{js,json,jsx,md}\" -- prettier --write {{changed}}",
     "eslint": "eslint --ext .js,.jsx .",

@@ -28,7 +28,7 @@ export default ({ data, location }) => {
                 {title}
               </Link>
             </h3>
-            <small>{node.frontmatter.date}</small>
+            <span className="date">{node.frontmatter.date}</span>
             <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
           </div>
         );
