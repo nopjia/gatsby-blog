@@ -1,7 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
-import get from "lodash/get";
 
 import Bio from "../components/Bio";
 import Layout from "../components/layout";
@@ -9,7 +8,7 @@ import { rhythm, scale } from "../utils/typography";
 
 export default ({ data, pageContext, location }) => {
   const post = data.markdownRemark;
-  const siteTitle = get("data.site.siteMetadata.title");
+  const siteTitle = data.site.siteMetadata.title;
   const { previous, next } = pageContext;
 
   return (

@@ -53,6 +53,7 @@
     "prettier:watch": "onchange \"{,!(.cache|public)/**/}*.{js,json,jsx,md}\" -- prettier --write {{changed}}",
     "eslint": "eslint --ext .js,.jsx .",
     "eslint:fix": "eslint --ext .js,.jsx .",
-    "eslint:watch": "onchange \"{,!(.cache|public)/**/}*.{js,jsx}\" -- eslint {{changed}}"
+    "eslint:watch": "onchange \"{,!(.cache|public)/**/}*.{js,jsx}\" -- eslint {{changed}}",
+    "clean": "rm -rf .cache public"
   }
 }
