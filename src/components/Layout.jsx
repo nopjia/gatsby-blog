@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
+import SchemePallete from "./SchemePallete";
 import "normalize.css";
+import "./styles/global.scss";
 
 export default ({ siteTitle, location, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`;
@@ -16,12 +18,10 @@ export default ({ siteTitle, location, children }) => {
     header = (
       <div className="navbar">
         <h3>
+          <SchemePallete />
           <ul>
             <li>
               <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/">About</Link>
             </li>
             <li>
               <Link to="/">Work</Link>
