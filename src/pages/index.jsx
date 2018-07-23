@@ -9,7 +9,7 @@ export default ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
-    <Layout location={location} siteTitle={siteTitle}>
+    <Layout location={location}>
       <Helmet title={siteTitle} />
       {posts.map(({ node }) => {
         const title = get(node, "frontmatter.title") || node.fields.slug;

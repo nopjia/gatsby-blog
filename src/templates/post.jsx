@@ -9,7 +9,7 @@ export default ({ data, pageContext, location }) => {
   const { previous, next } = pageContext;
 
   return (
-    <Layout location={location} siteTitle={siteTitle}>
+    <Layout location={location}>
       <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
       <h1>{post.frontmatter.title}</h1>
       <p className="date">{post.frontmatter.date}</p>

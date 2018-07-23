@@ -4,17 +4,11 @@ import SchemePallete from "./SchemePallete";
 import "normalize.css";
 import "./styles/global.scss";
 
-export default ({ siteTitle, location, children }) => {
+export default ({ location, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`;
   let header;
 
-  if (location.pathname === rootPath) {
-    header = (
-      <h1>
-        <Link to="/">{siteTitle}</Link>
-      </h1>
-    );
-  } else {
+  if (location.pathname !== rootPath) {
     header = (
       <div className="navbar">
         <h3>
