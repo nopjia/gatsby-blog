@@ -16,8 +16,31 @@
         fill: $c3;
       }
     }
-    .scheme-palette>div {
-      border-color: $c1;
+    h1 {
+      color: $c1;
+    } 
+    h2, h3, h4, h5, h6 {
+      color: $c2;
+    }
+    blockquote {
+      border-color: $c25;
+      color: $c2;
+    }
+    hr {
+      background: $c25;
+    }
+    .secondary {
+      color: $c2;
+    }
+    .tertiary {
+      color: $c3;
+    }
+    .scheme-palette {
+      &>div {
+        &.selected {
+          border-color: $c1;
+        }
+      }
     }
   }
   .scheme-palette>div[data-palette="#{$name}"] {
