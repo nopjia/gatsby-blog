@@ -1,16 +1,13 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import get from "lodash/get";
-import Helmet from "react-helmet";
 import Layout from "../components/Layout";
 
 export default ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title;
   const posts = data.allMarkdownRemark.edges;
 
   return (
     <Layout location={location}>
-      <Helmet title={siteTitle} />
       {posts.map(({ node }) => {
         const title = get(node, "frontmatter.title") || node.fields.slug;
         return (
