@@ -3,7 +3,6 @@ import { graphql, Link } from "gatsby";
 import get from "lodash/get";
 import Helmet from "react-helmet";
 import Layout from "../components/Layout";
-import { rhythm } from "../utils/typography";
 
 export default ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
@@ -16,11 +15,7 @@ export default ({ data, location }) => {
         const title = get(node, "frontmatter.title") || node.fields.slug;
         return (
           <div key={node.fields.slug}>
-            <h3
-              style={{
-                marginBottom: rhythm(1 / 4),
-              }}
-            >
+            <h3>
               <Link style={{ boxShadow: "none" }} to={node.fields.slug}>
                 {title}
               </Link>
