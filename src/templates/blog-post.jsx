@@ -3,8 +3,7 @@ import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 
 import Bio from "../components/Bio";
-import Layout from "../components/layout";
-import { rhythm, scale } from "../utils/typography";
+import Layout from "../components/Layout";
 
 export default ({ data, pageContext, location }) => {
   const post = data.markdownRemark;
