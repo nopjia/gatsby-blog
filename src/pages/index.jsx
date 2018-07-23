@@ -2,8 +2,6 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import get from "lodash/get";
 import Helmet from "react-helmet";
-
-import Bio from "../components/Bio";
 import Layout from "../components/Layout";
 import { rhythm } from "../utils/typography";
 
@@ -12,9 +10,8 @@ export default ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
-    <Layout location={location}>
+    <Layout location={location} siteTitle={siteTitle}>
       <Helmet title={siteTitle} />
-      <Bio />
       {posts.map(({ node }) => {
         const title = get(node, "frontmatter.title") || node.fields.slug;
         return (

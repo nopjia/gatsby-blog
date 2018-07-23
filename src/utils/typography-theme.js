@@ -15,13 +15,17 @@ const overrideStyles = ({ rhythm }) => ({
   "h2, h3, h4, h5, h6": {
     color: color2,
   },
+  hr: {
+    background: color25,
+  },
   a: {
     color: color1,
   },
   "a:active, a:hover": {
     color: color3,
+    textDecoration: "underline",
   },
-  "h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a": {
+  "h1 a, h2 a, h3 a, h4 a, h5 a, h6 a": {
     textDecoration: "none",
   },
   blockquote: {
@@ -32,8 +36,21 @@ const overrideStyles = ({ rhythm }) => ({
     marginLeft: 0,
     paddingLeft: `calc(${rhythm(1 / 2)})`,
   },
+
   ".date": {
     color: color2,
+  },
+  ".navbar hr": {
+    "margin-bottom": rhythm(2),
+  },
+  ".navbar ul": {
+    "list-style-type": "none",
+    margin: 0,
+    padding: 0,
+  },
+  ".navbar li": {
+    display: "inline",
+    "margin-right": rhythm(1),
   },
 });
 

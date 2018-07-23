@@ -1,8 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
-
-import Bio from "../components/Bio";
 import Layout from "../components/Layout";
 
 export default ({ data, pageContext, location }) => {
@@ -11,14 +9,12 @@ export default ({ data, pageContext, location }) => {
   const { previous, next } = pageContext;
 
   return (
-    <Layout location={location}>
+    <Layout location={location} siteTitle={siteTitle}>
       <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
       <h1>{post.frontmatter.title}</h1>
       <p className="date">{post.frontmatter.date}</p>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
       <hr />
-      <Bio />
-
       <ul
         style={{
           display: "flex",
@@ -26,6 +22,7 @@ export default ({ data, pageContext, location }) => {
           justifyContent: "space-between",
           listStyle: "none",
           padding: 0,
+          margin: 0,
         }}
       >
         {previous && (
