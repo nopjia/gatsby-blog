@@ -6,15 +6,17 @@ $duration: 500ms;
     margin-right: -50vw;
     opacity: 0;
   }
-  &.forward-enter-done {
+  &.forward-appear-active {
+    margin-left: 0;
+    margin-right: 0;
+    opacity: 1;
     transition: all $duration ease-out;
   }
   &.forward-exit {
-    transition: all $duration ease-in;
-
     margin-left: -50vw;
     margin-right: 50vw;
     opacity: 0;
+    transition: all $duration ease-in;
   }
 
   &.backward-appear {
@@ -22,14 +24,16 @@ $duration: 500ms;
     margin-right: 50vw;
     opacity: 0;
   }
-  &.backward-enter-done {
+  &.backward-appear-active {
+    margin-left: 0;
+    margin-right: 0;
+    opacity: 1;
     transition: all $duration ease-out;
   }
   &.backward-exit {
-    transition: all $duration ease-in;
-
     margin-left: 50vw;
     margin-right: -50vw;
     opacity: 0;
+    transition: all $duration ease-in;
   }
 }

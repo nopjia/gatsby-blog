@@ -69,7 +69,7 @@ hr {
   color: $color-3;
 }
 
-.scheme-palette {
+.theme-palette {
   float: right;
   &>div {
     width: 1rem;
@@ -152,4 +152,4 @@ hr {
 }
 
 // must be imported last so theme can override everything
-@import "_color-schemes.scss";
+@import "_color-themes.scss";

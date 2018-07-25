@@ -3,8 +3,8 @@
 
 import React from "react";
 
-const setScheme = (e) => {
-  const prevElem = document.querySelector("div.scheme-palette>div.selected");
+const setTheme = (e) => {
+  const prevElem = document.querySelector("div.theme-palette>div.selected");
   const elem = e.target;
   if (elem === prevElem) {
     return;
@@ -17,18 +17,18 @@ const setScheme = (e) => {
     prevElem.classList.remove("selected");
   }
 
-  // extract scheme colors for renderer
+  // extract theme colors for renderer
   // const bgcolor = rgbToHex(window.getComputedStyle(document.body).getPropertyValue("background-color"));
   // const color = rgbToHex(window.getComputedStyle(document.body).getPropertyValue("color"));
   // renderer.setColors(color, bgcolor);
-  // console.log("Scheme: " + color + "," + bgcolor);
+  // console.log("Theme: " + color + "," + bgcolor);
 };
 
 export default () => (
-  <div className="scheme-palette">
-    <div data-palette="dos" onClick={setScheme} />
-    <div data-palette="sepia" onClick={setScheme} />
-    <div data-palette="dark" onClick={setScheme} />
-    <div data-palette="" onClick={setScheme} className="selected" />
+  <div className="theme-palette">
+    <div data-palette="dos" onClick={setTheme} />
+    <div data-palette="sepia" onClick={setTheme} />
+    <div data-palette="dark" onClick={setTheme} />
+    <div data-palette="" onClick={setTheme} className="selected" />
   </div>
 );

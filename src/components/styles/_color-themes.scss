@@ -1,4 +1,4 @@
-@mixin color-scheme($name, $cbg, $c1, $c2, $c25, $c3) {
+@mixin color-theme($name, $cbg, $c1, $c2, $c25, $c3) {
   body.#{$name} {
     background: $cbg;
     color: $c1;
@@ -38,7 +38,7 @@
     .footer {
       color: $c2;
     }
-    .scheme-palette {
+    .theme-palette {
       &>div {
         &.selected {
           border-color: $c1;
@@ -46,13 +46,13 @@
       }
     }
   }
-  .scheme-palette>div[data-palette="#{$name}"] {
+  .theme-palette>div[data-palette="#{$name}"] {
     background-color: $cbg;
     border-color: $cbg;
   }
 }
 
-@include color-scheme(
+@include color-theme(
   "dark",
   $dark-color-bg,
   $dark-color-1,
@@ -61,7 +61,7 @@
   $dark-color-3
 );
 
-@include color-scheme(
+@include color-theme(
   "sepia",
   #FFF4DD,
   #42210B,
@@ -70,7 +70,7 @@
   #AA0000
 );
 
-@include color-scheme(
+@include color-theme(
   "dos",
   blue,
   white,
