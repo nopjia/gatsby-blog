@@ -45,8 +45,9 @@
     "prettier": "^1.12.0"
   },
   "scripts": {
-    "build": "npm-run-all -s prettier eslint gatsby:build",
+    "build": "npm-run-all -s validate gatsby:build",
     "dev": "npm-run-all -p prettier:watch eslint:watch gatsby:develop",
+    "validate": "npm-run-all -s prettier eslint:fix",
     "gatsby:build": "gatsby build",
     "gatsby:develop": "gatsby develop --port 9000",
     "prettier": "prettier --write \"{,!(.cache|public)/**/}*.{js,json,jsx,md}\"",

@@ -1,0 +1,12 @@
+.transition {
+  transition: opacity 500ms ease-out;
+}
+.transition-appear {
+  opacity: 0.0;
+}
+.transition-enter-done {
+  opacity: 1.0;
+}
+.transition-exit {
+  opacity: 0.0;
+}

@@ -1,24 +1,7 @@
 import React from "react";
-import { Transition as ReactTransition } from "react-transition-group";
+import { CSSTransition } from "react-transition-group";
 import { historyExitingEventType, duration } from "../../gatsby-browser";
-
-const getTransitionStyles = (timeout) => ({
-  entering: {
-    opacity: 0,
-  },
-  entered: {
-    transition: `opacity ${timeout}ms ease-in-out`,
-    opacity: 1,
-  },
-  exiting: {
-    transition: `opacity ${timeout}ms ease-in-out`,
-    opacity: 0,
-  },
-});
-
-const getTransitionStyle = (timeout, status) => {
-  return getTransitionStyles(timeout)[status];
-};
+import "./styles/transition.scss";
 
 class Transition extends React.Component {
   constructor(props) {
@@ -48,26 +31,21 @@ class Transition extends React.Component {
 
   render() {
     const transitionProps = {
-      timeout: {
-        enter: 0,
-        exit: duration,
-      },
+      timeout: duration,
       appear: true,
       in: !this.state.exiting,
+      classNames: "transition",
     };
 
     return (
-      <ReactTransition {...transitionProps}>
+      <CSSTransition {...transitionProps}>
         {(status) => (
-          <div
-            style={{
-              ...getTransitionStyle(duration, status),
-            }}
-          >
+          <div className="transition">
+            {status}
             {this.props.children}
           </div>
         )}
-      </ReactTransition>
+      </CSSTransition>
     );
   }
 }

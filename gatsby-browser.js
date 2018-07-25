@@ -1,11 +1,14 @@
 /* globals window CustomEvent */
+/* eslint-disable import/no-extraneous-dependencies */
 import createHistory from "history/createBrowserHistory";
 
-const duration = 250;
-const historyExitingEventType = `history:exiting`;
+const duration = 500;
+const historyExitingEventType = "history:entering";
 
 const getUserConfirmation = (pathname, callback) => {
-  const event = new CustomEvent(historyExitingEventType, { detail: { pathname } });
+  const event = new CustomEvent(historyExitingEventType, {
+    detail: { pathname },
+  });
   window.dispatchEvent(event);
   setTimeout(() => {
     callback(true);
@@ -19,6 +22,6 @@ if (typeof document !== "undefined") {
   history.block((location, action) => location.pathname);
 }
 
-export let replaceHistory = () => history;
+export let replaceHistory = () => history; // eslint-disable-line
 
 export { historyExitingEventType, duration };
