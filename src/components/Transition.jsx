@@ -39,12 +39,7 @@ class Transition extends React.Component {
 
     return (
       <CSSTransition {...transitionProps}>
-        {(status) => (
-          <div className="transition">
-            {status}
-            {this.props.children}
-          </div>
-        )}
+        <div className="transition">{this.props.children}</div>
       </CSSTransition>
     );
   }
