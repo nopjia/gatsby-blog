@@ -14,11 +14,18 @@ export default ({ children, location, title }) => {
     pageTitle = location.pathname;
     pageTitle = pageTitle.charAt(1).toUpperCase() + pageTitle.slice(2, -1);
   }
+  let headTitle;
   if (pageTitle) {
-    pageTitle = `${pageTitle} | ${siteConfig.title}`;
+    headTitle = `${pageTitle} | ${siteConfig.title}`;
   } else {
-    pageTitle = siteConfig.title;
+    headTitle = siteConfig.title;
   }
+
+  const links = {
+    Home: "/",
+    Work: "/work/",
+    Contact: "/contact/",
+  };
 
   let header;
 
@@ -28,15 +35,15 @@ export default ({ children, location, title }) => {
         <h3>
           <SchemePallete />
           <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/work/">Work</Link>
-            </li>
-            <li>
-              <Link to="/contact/">Contact</Link>
-            </li>
+            {Object.keys(links).map((k) => {
+              const v = links[k];
+              if (k === pageTitle) return <li>{k}</li>;
+              return (
+                <li>
+                  <Link to={v}>{k}</Link>
+                </li>
+              );
+            })}
           </ul>
         </h3>
         <hr />
@@ -53,7 +60,7 @@ export default ({ children, location, title }) => {
 
   return (
     <div className="layout">
-      <Helmet title={pageTitle} />
+      <Helmet title={headTitle} />
       <Transition>
         {header}
         {children}
