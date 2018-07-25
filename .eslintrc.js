@@ -16,6 +16,7 @@ module.exports = {
     __PATH_PREFIX__: false,
   },
   rules: {
+    "no-unused-vars": ["error", { args: "none" }],
     "react/jsx-one-expression-per-line": "off",
     "react/no-danger": "off",
     "react/prop-types": "off",

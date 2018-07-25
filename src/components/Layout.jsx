@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import Helmet from "react-helmet";
+import Transition from "./Transition";
 import SchemePallete from "./SchemePallete";
 import siteConfig from "../../siteConfig";
 import "normalize.css";
@@ -53,9 +54,11 @@ export default ({ children, location, title }) => {
   return (
     <div className="layout">
       <Helmet title={pageTitle} />
-      {header}
-      {children}
-      {footer}
+      <Transition>
+        {header}
+        {children}
+        {footer}
+      </Transition>
     </div>
   );
 };

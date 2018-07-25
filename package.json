@@ -31,7 +31,8 @@
     "prismjs": "^1.15.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-transition-group": "^2.4.0"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
@@ -51,7 +52,7 @@
     "prettier": "prettier --write \"{,!(.cache|public)/**/}*.{js,json,jsx,md}\"",
     "prettier:watch": "onchange \"{,!(.cache|public)/**/}*.{js,json,jsx,md}\" -- prettier --write {{changed}}",
     "eslint": "eslint --ext .js,.jsx .",
-    "eslint:fix": "eslint --ext .js,.jsx .",
+    "eslint:fix": "eslint --fix --ext .js,.jsx .",
     "eslint:watch": "onchange \"{,!(.cache|public)/**/}*.{js,jsx}\" -- eslint {{changed}}",
     "clean": "rm -rf .cache public"
   }
