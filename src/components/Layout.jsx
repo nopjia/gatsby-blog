@@ -37,10 +37,9 @@ export default ({ children, location, title }) => {
           <ul>
             {Object.keys(links).map((k) => {
               const v = links[k];
-              if (k === pageTitle) return <li>{k}</li>;
               return (
-                <li>
-                  <Link to={v}>{k}</Link>
+                <li key={k}>
+                  {k === pageTitle ? <span>{k}</span> : <Link to={v}>{k}</Link>}
                 </li>
               );
             })}
@@ -61,7 +60,7 @@ export default ({ children, location, title }) => {
   return (
     <div className="layout">
       <Helmet title={headTitle} />
-      <Transition>
+      <Transition location={location}>
         {header}
         {children}
         {footer}

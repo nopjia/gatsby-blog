@@ -1,12 +1,35 @@
+$duration: 500ms;
+
 .transition {
-  transition: opacity 500ms ease-out;
-}
-.transition-appear {
-  opacity: 0.0;
-}
-.transition-enter-done {
-  opacity: 1.0;
-}
-.transition-exit {
-  opacity: 0.0;
+  &.forward-appear {
+    margin-left: 50vw;
+    margin-right: -50vw;
+    opacity: 0;
+  }
+  &.forward-enter-done {
+    transition: all $duration ease-out;
+  }
+  &.forward-exit {
+    transition: all $duration ease-in;
+
+    margin-left: -50vw;
+    margin-right: 50vw;
+    opacity: 0;
+  }
+
+  &.backward-appear {
+    margin-left: -50vw;
+    margin-right: 50vw;
+    opacity: 0;
+  }
+  &.backward-enter-done {
+    transition: all $duration ease-out;
+  }
+  &.backward-exit {
+    transition: all $duration ease-in;
+
+    margin-left: 50vw;
+    margin-right: -50vw;
+    opacity: 0;
+  }
 }

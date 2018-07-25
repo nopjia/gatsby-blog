@@ -1,45 +1,53 @@
 import React from "react";
 import { CSSTransition } from "react-transition-group";
-import { historyExitingEventType, duration } from "../../gatsby-browser";
+import { historyEventType, duration } from "../../gatsby-browser";
 import "./styles/transition.scss";
 
 class Transition extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { exiting: false };
+    this.state = {
+      exiting: false,
+      pathname: props.location.pathname,
+    };
     this.listenerHandler = this.listenerHandler.bind(this);
   }
 
   componentDidMount() {
-    window.addEventListener(historyExitingEventType, this.listenerHandler);
+    window.addEventListener(historyEventType, this.listenerHandler);
   }
 
   componentWillUnmount() {
-    window.removeEventListener(historyExitingEventType, this.listenerHandler);
-  }
-
-  static getDerivedStateFromProps({ exiting }) {
-    if (exiting) {
-      return { exiting: false };
-    }
-    return null;
+    window.removeEventListener(historyEventType, this.listenerHandler);
   }
 
   listenerHandler(event) {
-    this.setState({ exiting: true });
+    this.setState({
+      exiting: true,
+      pathname: event.detail.pathname,
+    });
   }
 
   render() {
+    const { exiting, pathname } = this.state;
+    const direction =
+      pathname === "/" || pathname === "" ? "backward" : "forward";
+
     const transitionProps = {
-      timeout: duration,
+      timeout: {
+        enter: 0,
+        exit: duration,
+      },
       appear: true,
-      in: !this.state.exiting,
-      classNames: "transition",
+      in: !exiting,
+      classNames: direction,
     };
 
     return (
       <CSSTransition {...transitionProps}>
-        <div className="transition">{this.props.children}</div>
+        {(state) => {
+          return <div className="transition">{this.props.children}</div>;
+        }}
       </CSSTransition>
     );
   }
