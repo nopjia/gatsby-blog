@@ -17,6 +17,7 @@ module.exports = {
   },
   rules: {
     "no-unused-vars": ["error", { args: "none" }],
+    "no-underscore-dangle": "off",
     "react/jsx-one-expression-per-line": "off",
     "react/no-danger": "off",
     "react/prop-types": "off",
