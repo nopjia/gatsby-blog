@@ -19,6 +19,7 @@ class CanvasBackground extends React.Component {
     this.start = this.start.bind(this);
     this.stop = this.stop.bind(this);
     this.update = this.update.bind(this);
+    this.resize = this.resize.bind(this);
 
     this.colorMain = 0x0;
     this.colorBg = 0xffffff;
@@ -26,40 +27,45 @@ class CanvasBackground extends React.Component {
   }
 
   componentDidMount() {
+    window.addEventListener("resize", this.resize);
     this.init();
   }
 
   componentWillUnmount() {
     this.stop();
     this.mount.removeChild(this.renderer.domElement);
+    window.removeEventListener("resize", this.resize);
+
     console.log("CanvasBackground unmount");
+  }
+
+  setColors(colorMain, colorBg) {
+    this.matLine.color.set(colorMain);
+    this.matFill.color.set(colorBg);
+    this.renderer.setClearColor(colorBg);
+    this.scene.fog.color.set(colorBg);
+
+    // sync, but not really used
+    this.colorMain = colorMain;
+    this.colorBg = colorBg;
   }
 
   init() {
     console.log("CanvasBackground init");
-
-    this.w = this.mount.clientWidth;
-    this.h = this.mount.clientHeight;
 
     this.renderer = new THREE.WebGLRenderer({
       canvas: this.canvas,
       stencil: false,
       antialias: true,
     });
-    this.renderer.setSize(this.w, this.h);
-    this.renderer.setClearColor(this.colorBg);
+    this.scene = new THREE.Scene();
+    this.camera = new THREE.PerspectiveCamera(_CAM_FOV, 1, 0.01, 100);
+
     this.mount.appendChild(this.renderer.domElement);
 
-    this.scene = new THREE.Scene();
-    this.camera = new THREE.PerspectiveCamera(
-      _CAM_FOV,
-      this.w / this.h,
-      0.01,
-      100
-    );
-
+    this.resize();
     this.initScene();
-
+    this.setColors(this.colorMain, this.colorBg);
     this.start();
   }
 
@@ -78,6 +84,14 @@ class CanvasBackground extends React.Component {
 
   stop() {
     cancelAnimationFrame(this.frameId);
+  }
+
+  resize() {
+    const w = this.mount.clientWidth;
+    const h = this.mount.clientHeight;
+    this.renderer.setSize(w, h);
+    this.camera.aspect = w / h;
+    this.camera.updateProjectionMatrix();
   }
 
   initScene() {
@@ -102,29 +116,29 @@ class CanvasBackground extends React.Component {
     this.scene.add(new THREE.AmbientLight(0x888888));
 
     // materials
-    const matLine = new THREE.MeshBasicMaterial({
+    this.matLine = new THREE.MeshBasicMaterial({
       color: this.colorMain,
       wireframe: true,
     });
-    const matFill = new THREE.MeshLambertMaterial({
+    this.matFill = new THREE.MeshLambertMaterial({
       color: this.colorBg,
       polygonOffset: true,
       polygonOffsetFactor: 1.0,
     });
 
     // debug box
-    this.bboxMesh = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), matLine);
-    this.bbox.getCenter(this.bboxMesh.position);
-    this.bbox.getSize(this.bboxMesh.scale);
-    this.scene.add(this.bboxMesh);
+    // this.bboxMesh = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), matLine);
+    // this.bbox.getCenter(this.bboxMesh.position);
+    // this.bbox.getSize(this.bboxMesh.scale);
+    // this.scene.add(this.bboxMesh);
 
     // load meshes
     this.meshes = [];
     const loader = new THREE.JSONLoader();
     loader.load(_GEO_URL, (geo) => {
       for (let i = 0; i < _MESH_COUNT; i += 1) {
-        const meshLine = new THREE.Mesh(geo, matLine);
-        const meshFill = new THREE.Mesh(geo, matFill);
+        const meshLine = new THREE.Mesh(geo, this.matLine);
+        const meshFill = new THREE.Mesh(geo, this.matFill);
 
         const size = this.bbox.getSize(new THREE.Vector3());
         const randPos = new THREE.Vector3(
@@ -179,18 +193,27 @@ class CanvasBackground extends React.Component {
         const mesh1 = meshes[i];
         const mesh2 = meshes[i + 1];
 
-        if (mesh1.position.x > bbox.max.x)
-          mesh1.position.x = mesh2.position.x = bbox.min.x;
-        else if (mesh1.position.x < bbox.min.x)
-          mesh1.position.x = mesh2.position.x = bbox.max.x;
-        if (mesh1.position.y > bbox.max.y)
-          mesh1.position.y = mesh2.position.y = bbox.min.y;
-        else if (mesh1.position.y < bbox.min.y)
-          mesh1.position.y = mesh2.position.y = bbox.max.y;
-        if (mesh1.position.z > bbox.max.z)
-          mesh1.position.z = mesh2.position.z = bbox.min.z;
-        else if (mesh1.position.z < bbox.min.z)
-          mesh1.position.z = mesh2.position.z = bbox.max.z;
+        if (mesh1.position.x > bbox.max.x) {
+          mesh1.position.x = bbox.min.x;
+          mesh2.position.x = bbox.min.x;
+        } else if (mesh1.position.x < bbox.min.x) {
+          mesh1.position.x = bbox.max.x;
+          mesh2.position.x = bbox.max.x;
+        }
+        if (mesh1.position.y > bbox.max.y) {
+          mesh1.position.y = bbox.min.y;
+          mesh2.position.y = bbox.min.y;
+        } else if (mesh1.position.y < bbox.min.y) {
+          mesh1.position.y = bbox.max.y;
+          mesh2.position.y = bbox.max.y;
+        }
+        if (mesh1.position.z > bbox.max.z) {
+          mesh1.position.z = bbox.min.z;
+          mesh2.position.z = bbox.min.z;
+        } else if (mesh1.position.z < bbox.min.z) {
+          mesh1.position.z = bbox.max.z;
+          mesh2.position.z = bbox.max.z;
+        }
       }
     }
 
