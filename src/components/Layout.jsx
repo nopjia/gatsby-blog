@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import Helmet from "react-helmet";
 import Transition from "./Transition";
 import ThemePallete from "./ThemePallete";
+import CanvasBackground from "./CanvasBackground";
 import siteConfig from "../../siteConfig";
 import "normalize.css";
 import "./styles/global.scss";
@@ -60,6 +61,7 @@ export default ({ children, location, title }) => {
   return (
     <div className="layout">
       <Helmet title={headTitle} />
+      <CanvasBackground />
       <Transition location={location}>
         {header}
         {children}
