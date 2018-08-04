@@ -1,6 +1,5 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
-import get from "lodash/get";
 import Layout from "../components/Layout";
 
 export default ({ data, location }) => {
@@ -9,7 +8,7 @@ export default ({ data, location }) => {
   return (
     <Layout location={location}>
       {posts.map(({ node }) => {
-        const title = get(node, "frontmatter.title") || node.fields.slug;
+        const title = node.frontmatter.title || node.fields.slug;
         return (
           <div key={node.fields.slug}>
             <h3>

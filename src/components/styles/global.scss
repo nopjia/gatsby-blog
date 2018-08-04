@@ -152,5 +152,35 @@ hr {
   margin-top: .5rem;
 }
 
+.works {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2em;
+  row-gap: 2em;
+
+  .item {
+    .image-wrap {
+      padding: 0.5em;
+      border: 1px solid $color-1;
+      margin-bottom: 0.5em;
+    }
+    .image {
+      width: 100%;
+      height: 10em;
+      background-repeat: no-repeat;
+      background-position-y: center;
+      background-size: 100%;
+    }
+  }
+
+  &:hover {
+    .item {
+      .image-wrap {
+        border-color: $color-3;
+      }
+    }
+  }
+}
+
 // must be imported last so theme can override everything
 @import "_color-themes.scss";

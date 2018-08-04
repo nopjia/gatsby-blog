@@ -18,7 +18,7 @@ Please reach out to me directly for any inquiries!
 - Data visualization
 - Photorealistic rendering (PBR)
 - Particle simulations (GPGPU)
-- Music visualizers, custom shaders, and more!
+- Music visualizers, VR, shaders, and more!
 
 ## Other Projects
 

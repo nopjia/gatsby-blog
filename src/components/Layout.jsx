@@ -8,7 +8,7 @@ import siteConfig from "../../siteConfig";
 import "normalize.css";
 import "./styles/global.scss";
 
-export default ({ children, location, title }) => {
+export default ({ children, location, title, width }) => {
   const rootPath = `${__PATH_PREFIX__}/`;
   let pageTitle = title;
   if (!pageTitle) {
@@ -59,8 +59,10 @@ export default ({ children, location, title }) => {
     </div>
   );
 
+  const style = width ? { maxWidth: `${width}px` } : {};
+
   return (
-    <div className="layout">
+    <div className="layout" style={style}>
       <Helmet title={headTitle} />
       <CanvasBackground />
       <Transition location={location}>

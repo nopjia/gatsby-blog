@@ -49,8 +49,6 @@ exports.createPages = ({ graphql, actions }) => {
           const template =
             slug.indexOf("posts") >= 0 ? postTemplate : pageTemplate;
 
-          console.log(slug, template);
-
           createPage({
             path: slug,
             component: template,
