@@ -5,7 +5,9 @@ export default ({ location }) => (
   <Layout location={location}>
     <h1>Work</h1>
     <h2>
-      here{"'"}s what I{"'"}ve been working on
+      here
+      {"'"}s what I{"'"}
+      ve been working on
     </h2>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

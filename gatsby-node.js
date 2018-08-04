@@ -8,7 +8,9 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
-    const blogPost = path.resolve("./src/templates/post.jsx");
+    const postTemplate = path.resolve("./src/templates/post.jsx");
+    const pageTemplate = path.resolve("./src/templates/page.jsx");
+
     resolve(
       graphql(
         `
@@ -43,12 +45,17 @@ exports.createPages = ({ graphql, actions }) => {
           const previous =
             index === posts.length - 1 ? null : posts[index + 1].node;
           const next = index === 0 ? null : posts[index - 1].node;
+          const slug = post.node.fields.slug;
+          const template =
+            slug.indexOf("posts") >= 0 ? postTemplate : pageTemplate;
+
+          console.log(slug, template);
 
           createPage({
-            path: post.node.fields.slug,
-            component: blogPost,
+            path: slug,
+            component: template,
             context: {
-              slug: post.node.fields.slug,
+              slug,
               previous,
               next,
             },

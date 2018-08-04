@@ -25,6 +25,7 @@ export default ({ children, location, title }) => {
   const links = {
     Home: "/",
     Work: "/work/",
+    Hire: "/hire/",
     Contact: "/contact/",
   };
 
