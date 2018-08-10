@@ -47,14 +47,12 @@ export default ({ children, location, title, width }) => {
             })}
           </ul>
         </h3>
-        <hr />
       </div>
     );
   }
 
   const footer = (
     <div className="footer">
-      <hr />
       <p>Copyright &copy; {new Date().getFullYear()} Nop Jiarathanakul</p>
     </div>
   );
