@@ -11,6 +11,8 @@ body {
 
   font-size: 14px;
   line-height: 1.5;
+
+  text-align: justify;
 }
 
 a, a:visited {
@@ -113,7 +115,7 @@ blockquote {
 
 .navbar {
   border-bottom: 1px solid $color-25;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
   h3 {
     margin: 1.5rem 0;
   }
@@ -129,7 +131,7 @@ blockquote {
 }
 
 .footer {
-  margin-top: 4rem;
+  margin-top: 5rem;
   color: $color-2;
   border-top: 1px solid $color-25;
   p {
@@ -138,9 +140,21 @@ blockquote {
   }
 }
 
+.section {
+  padding: 5rem 0;
+  border-bottom: 1px solid $color-25;
+  &:first-child {
+    padding-top: 0;
+  }
+  &:last-child {
+    border: none;
+    padding-bottom: 0;
+  }
+}
+
 .contact {
   list-style-type: none;
-  margin: 0;
+  margin-left: 0;
   a svg {
     width: 16px;
     height: 16px;
@@ -177,6 +191,13 @@ blockquote {
   column-gap: 1.5rem;
   row-gap: 1.5rem;
 
+  @media (min-width: 480px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   .item {
     .image-wrap {
       padding: 5px;
@@ -205,17 +226,15 @@ blockquote {
       }
     }
   }
-
-  @media (min-width: 480px) {
-    grid-template-columns: 1fr 1fr;
-  }
-  @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
 }
 
 .layout23 {
   display: grid;
+  column-gap: 1rem;
+
+  & > div > *:last-child {
+    margin-bottom: 0;
+  }
 
   div:nth-child(2) {
     text-align: right;

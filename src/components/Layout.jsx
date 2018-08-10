@@ -30,8 +30,7 @@ export default ({ children, location, title, width }) => {
   };
 
   let header;
-
-  if (location.pathname !== rootPath) {
+  if (true || location.pathname !== rootPath) {
     header = (
       <div className="navbar">
         <h3>
@@ -65,7 +64,7 @@ export default ({ children, location, title, width }) => {
       <CanvasBackground />
       <Transition location={location}>
         {header}
-        {children}
+        <div className="content">{children}</div>
         {footer}
       </Transition>
     </div>
