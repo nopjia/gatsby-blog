@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
   color: $color-2;
   margin: 0;
   padding: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 h1 {
   color: $color-1;
@@ -53,6 +53,14 @@ h1:first-of-type {
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   text-decoration: none;
+}
+
+li {
+  margin-bottom: 0;
+  & > p, & > ul, & > ol {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 blockquote {
