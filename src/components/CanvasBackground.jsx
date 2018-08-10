@@ -24,6 +24,8 @@ class CanvasBackground extends React.Component {
     this.colorMain = 0x0;
     this.colorBg = 0xffffff;
     this._lastTime = Date.now();
+
+    window.CANVAS_BACKGROUND = this;
   }
 
   componentDidMount() {
