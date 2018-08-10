@@ -1,23 +1,16 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import WorkItem from "../components/WorkItem";
+import WorkList from "../components/WorkList";
 
 export default ({ location, data }) => {
-  const items = data.allWorksJson.edges;
+  const items = data.allWorksJson.edges.map(({ node }) => node);
 
   return (
     <Layout location={location}>
       <h1>Work</h1>
       <h2>what {"I've"} been working on</h2>
-      <p>
-        <b>Categories:</b> code, web, design, traditional
-      </p>
-      <div className="works">
-        {items.map(({ node }) => (
-          <WorkItem key={node.title} title={node.title} image={node.image} />
-        ))}
-      </div>
+      <WorkList items={items} />
     </Layout>
   );
 };
@@ -29,10 +22,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allWorksJson(
-      filter: { type: { eq: "code" } }
-      sort: { fields: date, order: DESC }
-    ) {
+    allWorksJson(sort: { fields: date, order: DESC }) {
       edges {
         node {
           title

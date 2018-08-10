@@ -152,6 +152,21 @@ hr {
   margin-top: .5rem;
 }
 
+.work-list {
+  .category {
+    text-decoration: underline;
+    cursor: pointer;
+    &:hover {
+      color: $color-3;
+    }
+    &.selected {
+      cursor: auto;
+      text-decoration: none;
+      color: $color-2;
+    }
+  }
+}
+
 .works {
   display: grid;
   grid-template-columns: 1fr 1fr;
