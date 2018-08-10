@@ -213,10 +213,10 @@ hr {
     }
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 480px) {
     grid-template-columns: 1fr 1fr;
   }
-  @media (min-width: 900px) {
+  @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
