@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import Helmet from "react-helmet";
 import Transition from "./Transition";
-import ThemePallete from "./ThemePallete";
+import ThemePalette from "./ThemePalette";
 import CanvasBackground from "./CanvasBackground";
 import siteConfig from "../../siteConfig";
 import "normalize.css";
@@ -35,7 +35,7 @@ export default ({ children, location, title, width }) => {
     header = (
       <div className="navbar">
         <h3>
-          <ThemePallete />
+          <ThemePalette />
           <ul>
             {Object.keys(links).map((k) => {
               const v = links[k];

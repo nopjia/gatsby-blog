@@ -18,7 +18,7 @@ export default ({
       />
       {headComponents}
     </head>
-    <body {...bodyAttributes}>
+    <body className="white" {...bodyAttributes}>
       {preBodyComponents}
       <div
         key="body"

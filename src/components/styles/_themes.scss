@@ -1,0 +1,53 @@
+$color-1:  var(--color-1);
+$color-2:  var(--color-2);
+$color-25: var(--color-25);
+$color-3:  var(--color-3);
+$color-bg: var(--color-bg);
+
+@mixin palette-setting($name, $cbg) {
+  .theme-palette>div[data-palette="#{$name}"] {
+    background-color: $cbg;
+    border-color: $cbg;
+  }
+}
+
+body.white {
+  --color-bg: #fff;
+  --color-1:  #000;
+  --color-2:  #aaa;
+  --color-25: #ccc;
+  --color-3:  #880000;
+}
+@include palette-setting("white", #fff);
+
+body.dark {
+  --color-bg: #222;
+  --color-1:  #ccc;
+  --color-2:  #666;
+  --color-25: #444;
+  --color-3:  #cc6600;
+}
+@include palette-setting("dark", #222);
+
+body.sepia {
+  --color-bg: #FFF4DD;
+  --color-1:  #42210B;
+  --color-2:  #ECAC80;
+  --color-25: #ECC7AE;
+  --color-3:  #AA0000;
+}
+@include palette-setting("sepia", #FFF4DD);
+
+body.dos {
+  --color-bg: blue;
+  --color-1:  white;
+  --color-2:  yellow;
+  --color-25: gray;
+  --color-3:  red;
+}
+@include palette-setting("dos", blue);
+body.dos {
+  font-family: "VT323", Courier New, Courier, monospace;
+  // h1, h2 { font-size: 32px; }
+  // h3 { font-size: 20px; }
+}

@@ -29,6 +29,6 @@ export default () => (
     <div data-palette="dos" onClick={setTheme} />
     <div data-palette="sepia" onClick={setTheme} />
     <div data-palette="dark" onClick={setTheme} />
-    <div data-palette="" onClick={setTheme} className="selected" />
+    <div data-palette="white" onClick={setTheme} className="selected" />
   </div>
 );

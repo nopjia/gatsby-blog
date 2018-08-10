@@ -1,5 +1,8 @@
-@import "_constants.scss";
 @import "_html.scss";
+@import "_themes.scss";
+
+@import url("https://fonts.googleapis.com/css?family=Vollkorn|VT323");
+$font-stack: "Vollkorn", Georgia, Times New Roman, Times, serif;
 
 body {
   font-family: $font-stack;
@@ -53,13 +56,13 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 blockquote {
-  border-left: 1px solid $color-2-5;
+  border-left: 1px solid $color-25;
   color: $color-2;
 }
 
 hr {
   margin: 0;
-  background: $color-2-5;
+  background: $color-25;
 }
 
 .secondary {
@@ -196,6 +199,3 @@ hr {
     }
   }
 }
-
-// must be imported last so theme can override everything
-@import "_color-themes.scss";
