@@ -1,6 +1,5 @@
-/* globals THREE */
-
 import React from "react";
+import * as THREE from "three";
 
 // constants
 const _CAM_FOV = 45;

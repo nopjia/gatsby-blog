@@ -57,5 +57,11 @@ module.exports = {
     "gatsby-plugin-offline",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
+    {
+      resolve: "gatsby-plugin-layout",
+      options: {
+        component: require.resolve("./src/layouts/index.jsx"),
+      },
+    },
   ],
 };
