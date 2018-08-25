@@ -16,11 +16,11 @@ class ThemePalette extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      theme: "white",
-    };
+    document.body.className = document.body.className || "white";
 
-    document.body.className = this.state.theme;
+    this.state = {
+      theme: document.body.className,
+    };
   }
 
   setTheme(theme) {
