@@ -8,7 +8,7 @@ class WorkList extends React.Component {
   constructor() {
     super();
     this.state = {
-      category: "code",
+      category: "graphics",
     };
   }
 
@@ -17,7 +17,9 @@ class WorkList extends React.Component {
     const { category } = this.state;
     const categories = items.reduce(
       (output, item) => {
-        output[item.type] = true;
+        item.tags.forEach((tag) => {
+          output[tag] = true;
+        });
         return output;
       },
       { all: true }
@@ -61,12 +63,14 @@ class WorkList extends React.Component {
         <div className="works">
           {items
             .filter(
-              (item) => (category === "all" ? true : item.type === category)
+              (item) =>
+                category === "all" ? true : item.tags.indexOf(category) !== -1
             )
             .map((item) => (
               <WorkItem
                 key={item.title}
                 title={item.title}
+                slug={item.fields.slug}
                 image={item.image}
               />
             ))}

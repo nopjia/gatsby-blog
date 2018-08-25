@@ -1,7 +1,7 @@
 [
   {
     "title": "Wonder",
-    "type": "traditional",
+    "tags": ["traditional"],
     "tools": "Construction paper cutouts",
     "date": "2006-02-09",
     "desc": "Graphic design assignment for Advanced Studio Art at Milton Academy.",
@@ -10,7 +10,7 @@
   },
   {
     "title": "Inescapable Identity",
-    "type": "traditional",
+    "tags": ["traditional"],
     "tools": "Charcoal on paper",
     "date": "2006-11-08",
     "desc": "Identity assignment, for Advanced Drawing at Milton Academy.",
@@ -19,7 +19,7 @@
   },
   {
     "title": "Colossus",
-    "type": "traditional",
+    "tags": ["traditional"],
     "tools": "Graphite, charcoal, pastels",
     "date": "2007-01-15",
     "desc": "Final project. Advanced Drawing, Milton Academy.",
@@ -28,7 +28,7 @@
   },
   {
     "title": "Giant Donut",
-    "type": "traditional",
+    "tags": ["traditional"],
     "tools": "Acrylic on canvas",
     "date": "2007-02-12",
     "desc": "Small painting assignment. Advanced Painting, Milton Academy.",
@@ -37,7 +37,7 @@
   },
   {
     "title": "Still Life Painting No. 2",
-    "type": "traditional",
+    "tags": ["traditional"],
     "tools": "Acrylic on canvas",
     "date": "2007-02-27",
     "desc": "Still life painting assignment. Advanced Painting, Milton Academy",
@@ -46,7 +46,7 @@
   },
   {
     "title": "To the Lighthouse",
-    "type": "traditional",
+    "tags": ["traditional"],
     "tools": "Acrylic on canvas",
     "date": "2007-06-04",
     "desc": "Final painting project. Advanced Painting, Milton Academy.",
@@ -55,7 +55,7 @@
   },
   {
     "title": "Vase No. 2",
-    "type": "traditional",
+    "tags": ["traditional"],
     "tools": "Charcoal on paper",
     "date": "2007-08-07",
     "desc": "Still life drawing. ARDEL Studio.",
@@ -64,7 +64,7 @@
   },
   {
     "title": "Vase No. 7",
-    "type": "traditional",
+    "tags": ["traditional"],
     "tools": "Chinese ink on paper",
     "date": "2007-08-10",
     "desc": "Still life with Chinese ink, drawn with a bamboo stick! ARDEL Studio.",
@@ -73,7 +73,7 @@
   },
   {
     "title": "Twig No. 2",
-    "type": "traditional",
+    "tags": ["traditional"],
     "tools": "Pen on paper",
     "date": "2007-08-13",
     "desc": "Pointillism style. This was the second one, and my wrist was dead by the time I finished. ARDEL Studio.",
@@ -82,7 +82,7 @@
   },
   {
     "title": "Cloth Study",
-    "type": "traditional",
+    "tags": ["traditional"],
     "tools": "Pencil on paper",
     "date": "2007-08-15",
     "desc": "Practice with cloth. ARDEL Studio",
@@ -91,7 +91,7 @@
   },
   {
     "title": "Waiting for Godot",
-    "type": "traditional",
+    "tags": ["traditional"],
     "tools": "Acrylic on stonehenge paper",
     "date": "2007-10-09",
     "desc": "Experimenting with sky textures and alternate colors. Also just finished reading the play. Advanced Independent Art, Milton Academy.",
@@ -100,7 +100,7 @@
   },
   {
     "title": "Spectral Force",
-    "type": "traditional",
+    "tags": ["traditional"],
     "tools": "Acrylic on plywood",
     "date": "2007-11-14",
     "desc": "Another sky piece. Inspired by a strange sunset photograph. Advanced Independent Art, Milton Academy.",
@@ -109,7 +109,7 @@
   },
   {
     "title": "Roadkill",
-    "type": "design",
+    "tags": ["design"],
     "tools": "Illustrator",
     "date": "2008-10-10",
     "desc": "Compound word assignment. Digital Design Foundations, UPenn.",
@@ -118,7 +118,7 @@
   },
   {
     "title": "The Face-plant-er",
-    "type": "design",
+    "tags": ["design"],
     "tools": "Photoshop, Illustrator",
     "date": "2008-11-11",
     "desc": "For this assignment we're are to illustrate a page in an alphabet book of useless inventions, using a style inspired by the illustrator <a href=\"http://www.sarafanelli.com/\">Sarah Fanelli</a>. Digital Design Foundations, UPenn.",
@@ -127,7 +127,7 @@
   },
   {
     "title": "Manic Monday",
-    "type": "design",
+    "tags": ["design"],
     "tools": "Illustrator",
     "date": "2010-01-20",
     "desc": "Main design for Pan-Asian Dance Troupe's Spring 2009 show, \"Manic Monday\". ",
@@ -136,7 +136,7 @@
   },
   {
     "title": "Kim Eng Shopping Bag Concept",
-    "type": "design",
+    "tags": ["design"],
     "tools": "Illustrator",
     "date": "2009-08-14",
     "desc": "Concept design for a shopping bag for Kim Eng Securities (Thailand) PLC.",
@@ -145,7 +145,7 @@
   },
   {
     "title": "Kim Eng Mug",
-    "type": "design",
+    "tags": ["design"],
     "tools": "Illustrator",
     "date": "2009-08-19",
     "desc": "Promotional mug for Kim Eng Securities (Thailand) PLC. Same design as the bag.",
@@ -154,7 +154,7 @@
   },
   {
     "title": "Strike Rouge Gundam",
-    "type": "3D",
+    "tags": ["traditional"],
     "tools": "Maya",
     "date": "2009-12-11",
     "desc": "Strike Rouge Gundam. Referenced from a 1/144 model I borrowed from a friend. The figure is rigged. Texture material is basic blinn, except for the arms, shoulders, and pelvis, where I used mental ray rounded corners. 3D Modeling, UPenn.",
@@ -163,7 +163,7 @@
   },
   {
     "title": "Celebrity!",
-    "type": "design",
+    "tags": ["design"],
     "tools": "Photoshop",
     "date": "2010-02-09",
     "desc": "Poster for Pan-Asian Dance Troupe's Spring 2010 show, \"Celebrity!\"",
@@ -172,7 +172,7 @@
   },
   {
     "title": "Thai Night 2010",
-    "type": "design",
+    "tags": ["design"],
     "tools": "Photoshop",
     "date": "2010-04-02",
     "desc": "Flier design for Thai Student Association's Thai Night 2010. ",
@@ -181,7 +181,7 @@
   },
   {
     "title": "Why can't sailors play cards?",
-    "type": "design",
+    "tags": ["design"],
     "tools": "Photohop, Illustrator",
     "date": "2009-05-01",
     "desc": "Riddle pop-up book project. Final project for Digital Design Foundations, UPenn",
@@ -190,7 +190,7 @@
   },
   {
     "title": "IVA 2010",
-    "type": "web",
+    "tags": ["web"],
     "tools": "HTML, CSS",
     "date": "2009-12-03",
     "desc": "Website for the 10th International Conference on Intelligent Virtual Agents taking place at UPenn September 20-22, 2010.",
@@ -199,7 +199,7 @@
   },
   {
     "title": "slackertracker",
-    "type": "web",
+    "tags": ["web"],
     "tools": "HTML, CSS, PHP, SQL, Javascript",
     "date": "2009-10-17",
     "desc": "Project for the 2009 PennApps Competition. Won 2nd Place.",
@@ -208,7 +208,7 @@
   },
   {
     "title": "PennThai",
-    "type": "web",
+    "tags": ["web"],
     "tools": "HTML, CSS",
     "date": "2010-01-20",
     "desc": "Homepage for Thai Student Association at UPenn.",
@@ -217,7 +217,7 @@
   },
   {
     "title": "who's in my class?",
-    "type": "web",
+    "tags": ["web"],
     "tools": "HTML, CSS, PHP, SQL, Javascript",
     "date": "2010-09-19",
     "desc": "Project from the 2010 PennApps 48-hour hackathon competition. Won \"Most User-Friendly App\".",
@@ -226,7 +226,7 @@
   },
   {
     "title": "100FF Widget Concept 2",
-    "type": "design",
+    "tags": ["design"],
     "tools": "Photoshop, Illustrator",
     "date": "2009-07-16",
     "desc": "Concept design for 100 Fantasy Football Community's desktop widget. Concept not implemented. Copyrighted materials belong to Lowe Limited and 100 Community.",
@@ -235,7 +235,7 @@
   },
   {
     "title": "100FF Widget Concept 1",
-    "type": "design",
+    "tags": ["design"],
     "tools": "Photoshop, Illustrator",
     "date": "2009-07-10",
     "desc": "Concept design for 100 Fantasy Football Community's desktop widget. Copyrighted materials belong to Lowe Limited and 100 Community.",
@@ -244,7 +244,7 @@
   },
   {
     "title": "Thai Airways Calendar Concept",
-    "type": "design",
+    "tags": ["design"],
     "tools": "Photoshop, Illustrator",
     "date": "2009-06-19",
     "desc": "Concept design for Thai Airway's 2010 calendar. Copyrighted materials belong to Lowe Limited and Thai Airways.",
@@ -253,7 +253,7 @@
   },
   {
     "title": "Axe Landing Page Concept",
-    "type": "web",
+    "tags": ["web"],
     "tools": "Photoshop, Illustrator",
     "date": "2009-06-28",
     "desc": "Concept design for the landing page for AXE's promotional campaign in 2009. Copyrighted materials belong to Lowe Limited and AXE.",
@@ -262,7 +262,7 @@
   },
   {
     "title": "studyspaces @ penn",
-    "type": "web",
+    "tags": ["web"],
     "tools": "HTML, CSS, Django, jQuery",
     "date": "2011-01-21",
     "desc": "A web app designed to let students check for various available study spaces at UPenn. Currently a work in progress!",
@@ -271,7 +271,7 @@
   },
   {
     "title": "Thai Night 2011",
-    "type": "design",
+    "tags": ["design"],
     "tools": "Photoshop, Illustrator",
     "date": "2011-03-30",
     "desc": "Flier design for Thai Student Association's Thai Night 2011",
@@ -280,7 +280,7 @@
   },
   {
     "title": "PennThai T-Shirts 2011",
-    "type": "design",
+    "tags": ["design"],
     "tools": "Photoshop, Illustrator",
     "date": "2011-03-31",
     "desc": "T-shirt design for PennThai's new t-shirt for the upcoming Thai Night 2011.",
@@ -289,7 +289,7 @@
   },
   {
     "title": "Pan-Asian \"Wu\"",
-    "type": "design",
+    "tags": ["design"],
     "tools": "Illustrator",
     "date": "2011-11-20",
     "desc": "T-shirt design for Pan-Asian Dance Troupe.",
@@ -298,7 +298,7 @@
   },
   {
     "title": "Penn Course Review",
-    "type": "web",
+    "tags": ["web"],
     "tools": "HTML, CSS, Javascript, jQuery",
     "date": "2011-10-30",
     "desc": "A complete reconstruction of Penn's old course review website that was originally launched in 2002. The goal is to bring Web 2.0 design and technology to Penn's most important class reviews resource. ",
@@ -307,7 +307,7 @@
   },
   {
     "title": "Global Illumination on WebGL",
-    "type": "code",
+    "tags": ["graphics", "web"],
     "tools": "Javascript, GLSL, WebGL, Three.js",
     "date": "2011-12-20",
     "desc": "Real-time renderer on WebGL with Global Illumination. Senior Design Project. Uses ray tracing and photon mapping. Effects include, direct lighting, indirect lighting, reflection, and refraction. See development blog for more info. ",
@@ -316,7 +316,7 @@
   },
   {
     "title": "Ray Marching Distance Fields",
-    "type": "code",
+    "tags": ["graphics", "web"],
     "tools": "Javascript, GLSL, WebGL, Three.js",
     "date": "2012-04-18",
     "desc": "A real-time renderer on WebGL, uses the technique of ray marching distance fields. Final project for GPU Architecture class. More info on the development <a href=\"http://nopjia.blogspot.com/search/label/distance%20field\">blog</a>.",
@@ -325,7 +325,7 @@
   },
   {
     "title": "DroidXtend",
-    "type": "code",
+    "tags": ["graphics"],
     "tools": "Java, Python, MEL",
     "date": "2011-01-22",
     "desc": "An Android app that turns the phone into a 3D controller. Implemented with a Maya plug-in. Controls rotation, panning, and zoom. Won \"Best Android App\" Award in the 2011 PennApps Mobile 48-hour hackathon.",
@@ -334,7 +334,7 @@
   },
   {
     "title": "Hudson Beach Glass",
-    "type": "web",
+    "tags": ["web"],
     "tools": "Photoshop",
     "date": "2010-04-15",
     "desc": "Website design mockup for Hudson Beach Glass, Philadelphia.",
@@ -343,7 +343,7 @@
   },
   {
     "title": "Volumetric Renderer",
-    "type": "code",
+    "tags": ["graphics", "web"],
     "tools": "Javascript, GLSL, WebGL, Three.js",
     "date": "2012-08-21",
     "desc": "A real-time volumetric renderer on WebGL. Simulates 3D textures using 2D texture atlas. Features transmittance-based lighting, volumetric self-shadowing, and multiple lights. More info on <a href=\"http://nopjia.blogspot.com/2012/09/webgl-volumetric-renderer.html\">blog</a>.",
@@ -352,7 +352,7 @@
   },
   {
     "title": "CodeDJ Live",
-    "type": "code",
+    "tags": ["graphics", "web"],
     "tools": "Javascript, GLSL, WebGL, Three.js",
     "date": "2012-09-16",
     "desc": "Interactive real-time music visualizer with live GLSL compilation. Completed for the 2012 PennApps 48-hour hackathon. More info at <a href=\"http://nopjia.blogspot.com/2012/09/codedj-live.html\">blog</a>.",
@@ -361,7 +361,7 @@
   },
   {
     "title": "Guess Who?",
-    "type": "design",
+    "tags": ["design"],
     "tools": "Illustrator",
     "date": "2012-02-10",
     "desc": "T-shirt design for Pan-Asian Dance Troupe 2012 Spring Show \"Guess Who? - Murder on the Wedding Aisle\"",
@@ -369,8 +369,17 @@
     "image": "http://old.iamnop.com/images/portfolio/guesswhoshirt_th.png"
   },
   {
+    "title": "WebTube",
+    "tags": ["graphics", "web"],
+    "tools": "Javascript, CSS Shaders",
+    "date": "2013-01-20",
+    "desc": "Browse the internet through the comfort of an old-school CRT TV. Completed for the 2013 PennApps 48-hour hackathon. Won 3rd place overall and Audience Choice Award.",
+    "link": "http://nopjia.blogspot.com/2013/05/pennapps-spring-2013.html",
+    "image": "http://2.bp.blogspot.com/-HJrstu4d0ho/UZRrnlIB-nI/AAAAAAAAAzU/1p9nw3I4l7w/s1600/webtube2.png"
+  },
+  {
     "title": "CUDA Path Tracer",
-    "type": "code",
+    "tags": ["graphics"],
     "tools": "C++, CUDA, OpenGL",
     "date": "2013-07-21",
     "desc": "Interactive real-time iterative path tracer in CUDA. Final project for Advanced Rendering Seminar.",
@@ -379,11 +388,56 @@
   },
   {
     "title": "WebGL GPU Particles",
-    "type": "code",
+    "tags": ["graphics", "web"],
     "tools": "Javascript, GLSL, WebGL",
     "date": "2014-04-12",
     "desc": "Interactive real-time particle simulator on WebGL using GLSL shaders. More info on <a href=\"http://nopjia.blogspot.com/2014/06/webgl-gpu-particles.html\">blog</a>.",
-    "link": "/particles/",
-    "image": "http://old.iamnop.com/images/portfolio/webglparticles_th.png"
+    "link": "http://nopjia.blogspot.com/2014/06/webgl-gpu-particles.html",
+    "image": "http://4.bp.blogspot.com/-O8wDJwftREw/U5TT7H7nzEI/AAAAAAAABOc/8ACW4NA9MXo/s1600/webgl-particles-11.png"
+  },
+  {
+    "title": "A Particle Dream",
+    "tags": ["graphics", "web"],
+    "tools": "Javascript, GLSL, WebGL",
+    "date": "2015-04-07",
+    "desc": "Interactive particle simulation. Can target multiple shapes, both implicit functions and arbitrary meshes. Featured in <a href=\"https://experiments.withgoogle.com/particle-dream\">Chrome Experiments</a>.",
+    "link": "https://www.iamnop.com/particles/",
+    "image": "https://cloud.githubusercontent.com/assets/565791/6882387/2cbb2196-d540-11e4-8383-a79a8fc418d5.png"
+  },
+  {
+    "title": "lmv.rocks",
+    "tags": ["graphics", "web"],
+    "tools": "Javascript, WebGL, Polymer, Autodesk Viewing API",
+    "date": "2015-06-22",
+    "desc": "Custom showcase gallery built using Polymer, Google Material Library, and Autodesk Viewing API.",
+    "link": "http://lmv.rocks/",
+    "image": "http://lmv.rocks/gallery/thumbs/thumb_racecar.jpg"
+  },
+  {
+    "title": "3D Web Fest (Splash)",
+    "tags": ["graphics", "web"],
+    "tools": "Javascript, WebGL, Autodesk Play",
+    "date": "2016-06-15",
+    "desc": "Real-time show graphics made for the 2016 3D Web Fest at Fort Mason, San Francisco.",
+    "link": "https://pjia.bitbucket.io/publications/helmet/index.html",
+    "image": "https://pjia.bitbucket.io/boxes/10695342/ipsvsroj/preview.jpg"
+  },
+  {
+    "title": "Apollo 11",
+    "tags": ["graphics", "web"],
+    "tools": "Javascript, WebGL, Autodesk Play",
+    "date": "2016-07-20",
+    "desc": "Collaboration between Smithsonian and Autodesk to digitize the \"Columbia\" Apollo 11 Command Module, to mark the 47th anniversary of the lunar landing mission. Full story <a href=\"https://3d.si.edu/apollo11cm/\">here</a>",
+    "link": "https://pjia.bitbucket.io/publications/apollo-pano-vr/index.html",
+    "image": "https://pjia.bitbucket.io/boxes/17795674/j0yk5f7u/preview.jpg"
+  },
+  {
+    "title": "PBR Showcase",
+    "tags": ["graphics", "web"],
+    "tools": "Javascript, WebGL, Autodesk Play",
+    "date": "2017-09-01",
+    "desc": "Demo to showcase PBR capabilities of the Play engine, featuring the glTF Damaged Helmet.",
+    "link": "https://pjia.bitbucket.io/publications/helmet/index.html",
+    "image": "https://pjia.bitbucket.io/boxes/9817600/jb4c1872/preview.jpg"
   }
 ]

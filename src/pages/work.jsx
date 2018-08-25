@@ -26,8 +26,11 @@ export const pageQuery = graphql`
       edges {
         node {
           title
-          type
+          tags
           image
+          fields {
+            slug
+          }
         }
       }
     }
