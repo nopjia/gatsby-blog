@@ -4,6 +4,9 @@
 @import url("https://fonts.googleapis.com/css?family=Vollkorn|VT323");
 $font-stack: "Vollkorn", Georgia, Times New Roman, Times, serif;
 
+$media-sm: 480px;
+$media-md: 768px;
+
 body {
   font-family: $font-stack;
   background: $color-bg;
@@ -140,7 +143,7 @@ blockquote {
     }
   }
   .menu-container {
-    @media (max-width: 480px) {
+    @media (max-width: $media-sm) {
       li {
         display: block;
         margin-top: 0.5rem;
@@ -161,7 +164,7 @@ blockquote {
     &:hover, &:active {
       fill: $color-3;
     }
-    @media (min-width: 480px) {
+    @media (min-width: $media-sm) {
       display: none;
     }
   }
@@ -228,10 +231,10 @@ blockquote {
   column-gap: 1.5rem;
   row-gap: 1.5rem;
 
-  @media (min-width: 480px) {
+  @media (min-width: $media-sm) {
     grid-template-columns: 1fr 1fr;
   }
-  @media (min-width: 768px) {
+  @media (min-width: $media-md) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
@@ -279,13 +282,13 @@ blockquote {
   .detail {
     display: none;
   }
-  @media (min-width: 480px) {
+  @media (min-width: $media-sm) {
     grid-template-columns: 2fr 1fr;
     & > .detail {
       display: block;
     }
   }
-  @media (max-width: 480px) {
+  @media (max-width: $media-sm) {
     & > div > .detail {
       display: block;
     }
@@ -300,7 +303,7 @@ blockquote {
     text-align: right;
   }
 
-  @media (min-width: 480px) {
+  @media (min-width: $media-sm) {
     grid-template-columns: 2fr 1fr;
 
     & > div > *:last-child {

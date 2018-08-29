@@ -11,9 +11,9 @@ class Navigation extends React.Component {
     };
   }
 
-  toggle = () => {
+  toggle() {
     this.setState((prevState) => ({ expanded: !prevState.expanded }));
-  };
+  }
 
   render() {
     const { location } = this.props;
@@ -43,11 +43,13 @@ class Navigation extends React.Component {
     let toggleElem;
     let menuElem;
     if (this.state.expanded) {
-      toggleElem = <GoX className="menu-toggle" onClick={this.toggle} />;
+      toggleElem = (
+        <GoX className="menu-toggle" onClick={() => this.toggle()} />
+      );
       menuElem = <div className="menu-container expanded">{menu}</div>;
     } else {
       toggleElem = (
-        <GoThreeBars className="menu-toggle" onClick={this.toggle} />
+        <GoThreeBars className="menu-toggle" onClick={() => this.toggle()} />
       );
       menuElem = <div className="menu-container">{menu}</div>;
     }
