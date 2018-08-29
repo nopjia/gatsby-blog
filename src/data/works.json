@@ -414,12 +414,12 @@
     "youtube": "-_iRgB-_sEM"
   },
   {
-    "title": "3D Web Fest (Splash)",
+    "title": "3D Web Fest Graphic",
     "tags": ["graphics"],
     "tools": "Javascript, WebGL, Autodesk Play",
     "date": "2016-06-15",
     "desc": "Real-time show graphics made for the 2016 3D Web Fest at Fort Mason, San Francisco. More information <a href=\"http://codame.com/events/3d-web-fest-2016\">here</a>.",
-    "link": "https://pjia.bitbucket.io/publications/webfest-planet/index.html",
+    "link": "https://www.iamnop.com/play/#webfest-planet",
     "images": ["https://pjia.bitbucket.io/boxes/10695342/ipsvsroj/preview.jpg"]
   },
   {
@@ -428,7 +428,7 @@
     "tools": "Javascript, WebGL, Autodesk Play",
     "date": "2016-07-20",
     "desc": "Collaboration between Smithsonian and Autodesk to digitize the \"Columbia\" Apollo 11 Command Module, to mark the 47th anniversary of the lunar landing mission. Full story <a href=\"https://3d.si.edu/apollo11cm/\">here</a>.",
-    "link": "https://pjia.bitbucket.io/publications/apollo-pano-vr/index.html",
+    "link": "https://www.iamnop.com/play/#apollo-pano-vr",
     "images": ["https://pjia.bitbucket.io/boxes/17795674/j0yk5f7u/preview.jpg"]
   },
   {
@@ -437,7 +437,7 @@
     "tools": "Javascript, WebGL, Autodesk Play",
     "date": "2017-09-01",
     "desc": "Demo to showcase PBR capabilities of the Play engine, featuring the glTF Damaged Helmet. (Contact me directly for more information and demos for Play.)",
-    "link": "https://pjia.bitbucket.io/publications/helmet/index.html",
+    "link": "https://www.iamnop.com/play/#helmet",
     "images": ["https://pjia.bitbucket.io/boxes/9817600/jb4c1872/preview.jpg"]
   }
 ]
