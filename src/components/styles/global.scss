@@ -82,7 +82,9 @@ blockquote {
 }
 
 .theme-palette {
+  display: flex;
   float: right;
+  margin-top: .3rem;
   &>div {
     width: 1rem;
     height: 1rem;
@@ -120,9 +122,8 @@ blockquote {
 .navbar {
   border-bottom: 1px solid $color-25;
   margin-bottom: 5rem;
-  h3 {
-    margin: 1.5rem 0;
-  }
+  padding: 1.5rem 0;
+  font-size: 1.25rem;
   ul {
     list-style-type: none;
     margin: 0;
@@ -130,6 +131,38 @@ blockquote {
     li {
       display: inline;
       margin-right: 1rem;
+      a {
+        text-decoration: none;
+      }
+      span {
+        color: $color-2;
+      }
+    }
+  }
+  .menu-container {
+    @media (max-width: 480px) {
+      li {
+        display: block;
+        margin-top: 0.5rem;
+      }
+      display: none;
+      &.expanded {
+        display: block;
+      }
+    }
+  }
+  .menu-toggle {
+    cursor: pointer;
+    height: 2rem;
+    // both added equal to 2rem(height) - 1rem(inherit) = 1rem
+    // nudged more top margin 0.1rem
+    margin-top: -0.4rem;
+    margin-bottom: -0.6rem;
+    &:hover, &:active {
+      fill: $color-3;
+    }
+    @media (min-width: 480px) {
+      display: none;
     }
   }
 }

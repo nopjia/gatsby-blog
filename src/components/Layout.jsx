@@ -1,14 +1,12 @@
 import React from "react";
-import { Link } from "gatsby";
 import Helmet from "react-helmet";
 import Transition from "./Transition";
-import ThemePalette from "./ThemePalette";
 import siteConfig from "../../siteConfig";
 import "normalize.css";
 import "./styles/global.scss";
+import Navigation from "./Navigation";
 
 export default ({ children, location, title, width }) => {
-  const rootPath = `${__PATH_PREFIX__}/`;
   let pageTitle = title;
   if (!pageTitle) {
     pageTitle = location.pathname;
@@ -21,34 +19,6 @@ export default ({ children, location, title, width }) => {
     headTitle = siteConfig.title;
   }
 
-  const links = {
-    Home: "/",
-    Work: "/work/",
-    Hire: "/hire/",
-    Contact: "/contact/",
-  };
-
-  let header;
-  if (true || location.pathname !== rootPath) {
-    header = (
-      <div className="navbar">
-        <h3>
-          <ThemePalette />
-          <ul>
-            {Object.keys(links).map((k) => {
-              const v = links[k];
-              return (
-                <li key={k}>
-                  {k === pageTitle ? <span>{k}</span> : <Link to={v}>{k}</Link>}
-                </li>
-              );
-            })}
-          </ul>
-        </h3>
-      </div>
-    );
-  }
-
   const footer = (
     <div className="footer">
       <p>Copyright &copy; {new Date().getFullYear()} Nop Jiarathanakul</p>
@@ -56,12 +26,11 @@ export default ({ children, location, title, width }) => {
   );
 
   const style = width ? { maxWidth: `${width}px` } : {};
-
   return (
     <div className="layout" style={style}>
       <Helmet title={headTitle} />
       <Transition location={location}>
-        {header}
+        <Navigation location={location} />
         <div className="content">{children}</div>
         {footer}
       </Transition>
