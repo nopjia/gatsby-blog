@@ -263,16 +263,16 @@ blockquote {
   display: grid;
   column-gap: 1rem;
 
-  & > div > *:last-child {
-    margin-bottom: 0;
-  }
-
   div:nth-child(2), div:nth-child(2) p {
     text-align: right;
   }
 
   @media (min-width: 480px) {
     grid-template-columns: 2fr 1fr;
+
+    & > div > *:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
