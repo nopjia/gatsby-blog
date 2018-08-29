@@ -12,8 +12,6 @@ body {
   font-size: 14px;
   line-height: 1.5;
 
-  text-align: justify;
-
   overflow-x: hidden;
 }
 
@@ -57,6 +55,10 @@ h1:first-of-type {
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   text-decoration: none;
+}
+
+p {
+  text-align: justify;
 }
 
 li {
@@ -233,11 +235,27 @@ blockquote {
 .work {
   display: grid;
   column-gap: 2rem;
-  & > a > img {
-    width: 100%;
+  a.image {
+    display: block;
+    margin-bottom: 1rem;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .detail {
+    display: none;
   }
   @media (min-width: 480px) {
     grid-template-columns: 2fr 1fr;
+    & > .detail {
+      display: block;
+    }
+  }
+  @media (max-width: 480px) {
+    & > div > .detail {
+      display: block;
+    }
   }
 }
 
@@ -249,11 +267,27 @@ blockquote {
     margin-bottom: 0;
   }
 
-  div:nth-child(2) {
+  div:nth-child(2), div:nth-child(2) p {
     text-align: right;
   }
 
   @media (min-width: 480px) {
     grid-template-columns: 2fr 1fr;
   }
+}
+
+.iframewrap {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56%;
+  margin-bottom: 1rem;
+}
+iframe {
+  border: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
 }

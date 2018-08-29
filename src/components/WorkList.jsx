@@ -71,7 +71,7 @@ class WorkList extends React.Component {
                 key={item.title}
                 title={item.title}
                 slug={item.fields.slug}
-                image={item.image}
+                image={item.images[0]}
               />
             ))}
         </div>

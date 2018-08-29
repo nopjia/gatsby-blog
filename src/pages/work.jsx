@@ -27,7 +27,7 @@ export const pageQuery = graphql`
         node {
           title
           tags
-          image
+          images
           fields {
             slug
           }
