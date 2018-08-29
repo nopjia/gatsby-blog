@@ -17,6 +17,8 @@ class Navigation extends React.Component {
 
   render() {
     const { location } = this.props;
+    const { expanded } = this.state;
+
     const links = {
       Home: "/",
       Work: "/work/",
@@ -42,7 +44,7 @@ class Navigation extends React.Component {
 
     let toggleElem;
     let menuElem;
-    if (this.state.expanded) {
+    if (expanded) {
       toggleElem = (
         <GoX className="menu-toggle" onClick={() => this.toggle()} />
       );

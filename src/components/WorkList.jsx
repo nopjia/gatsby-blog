@@ -16,11 +16,11 @@ class WorkList extends React.Component {
     const { items } = this.props;
     const { category } = this.state;
     const categories = items.reduce(
-      (output, item) => {
+      (acc, item) => {
         item.tags.forEach((tag) => {
-          output[tag] = true;
+          acc[tag] = true;
         });
-        return output;
+        return acc;
       },
       { all: true }
     );

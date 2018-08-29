@@ -1,16 +1,15 @@
 const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
 
-const slugify = (text) => {
-  return text
+const slugify = (text) =>
+  text
     .toString()
     .toLowerCase()
     .replace(/\s+/g, "-") // Replace spaces with -
-    .replace(/[^\w\-]+/g, "") // Remove all non-word chars
-    .replace(/\-\-+/g, "-") // Replace multiple - with single -
+    .replace(/[^\w-]+/g, "") // Remove all non-word chars
+    .replace(/--+/g, "-") // Replace multiple - with single -
     .replace(/^-+/, "") // Trim - from start of text
     .replace(/-+$/, ""); // Trim - from end of text
-};
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
@@ -69,7 +68,7 @@ const createMarkdownPages = ({ graphql, actions }) => {
       const previous =
         index === posts.length - 1 ? null : posts[index + 1].node;
       const next = index === 0 ? null : posts[index - 1].node;
-      const slug = post.node.fields.slug;
+      const { slug } = post.node.fields;
       const template = slug.indexOf("posts") >= 0 ? postTemplate : pageTemplate;
 
       createPage({
@@ -109,7 +108,7 @@ const createWorkPages = ({ graphql, actions }) => {
 
     const works = result.data.allWorksJson.edges;
     works.forEach((work) => {
-      const slug = work.node.fields.slug;
+      const { slug } = work.node.fields;
       createPage({
         path: slug,
         component: workTemplate,
@@ -121,12 +120,7 @@ const createWorkPages = ({ graphql, actions }) => {
   });
 };
 
-exports.createPages = ({ graphql, actions }) => {
-  return Promise.resolve()
-    .then(() => {
-      return createMarkdownPages({ graphql, actions });
-    })
-    .then(() => {
-      return createWorkPages({ graphql, actions });
-    });
-};
+exports.createPages = ({ graphql, actions }) =>
+  Promise.resolve()
+    .then(() => createMarkdownPages({ graphql, actions }))
+    .then(() => createWorkPages({ graphql, actions }));

@@ -42,7 +42,10 @@ export default ({ location }) => (
 
     <div className="section">
       <h1>Recent Articles</h1>
-      <h2>what's been on my mind</h2>
+      <h2>
+        what
+        {"'"}s been on my mind
+      </h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet
         ante tristique, consequat ante id, mattis risus. Vivamus nulla leo,
@@ -55,9 +58,14 @@ export default ({ location }) => (
       <h1>Further Reading</h1>
       <div className="layout23">
         <div>
-          <h2>there's more older stuff</h2>
+          <h2>
+            there
+            {"'"}s more older stuff
+          </h2>
           <p>
-            If you're feeling curious, you can look around my{" "}
+            If you
+            {"'"}
+            re feeling curious, you can look around my{" "}
             <a href="http://old.iamnop.com/">old website</a>, when I was still
             in college and jQuery was all the rage. In my defense, it was a
             decent website for 2010. It even got featured{" "}
@@ -69,8 +77,8 @@ export default ({ location }) => (
               here
             </a>
             , and <a href="https://onepagelove.com/nop-jiarathanakul">here</a>.
-            Feel free to look around at my older stuff—just don't tease me about
-            them later!
+            Feel free to look around at my older stuff—just don
+            {"'"}t tease me about them later!
           </p>
         </div>
         <div>

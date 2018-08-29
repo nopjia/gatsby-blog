@@ -30,6 +30,7 @@ class Transition extends React.Component {
 
   render() {
     const { exiting, pathname } = this.state;
+    const { children } = this.props;
     const direction =
       pathname === "/" || pathname === "" ? "backward" : "forward";
 
@@ -42,11 +43,11 @@ class Transition extends React.Component {
 
     return (
       <CSSTransition {...transitionProps}>
-        {(state) => {
+        {(state) => (
           // const elem = document.getElementsByClassName("transition")[0];
           // console.log(state, elem ? elem.className : "");
-          return <div className="transition">{this.props.children}</div>;
-        }}
+          <div className="transition">{children}</div>
+        )}
       </CSSTransition>
     );
   }
