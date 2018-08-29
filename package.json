@@ -51,14 +51,13 @@
   "scripts": {
     "build": "npm-run-all -s validate gatsby:build",
     "dev": "npm-run-all -p prettier:watch eslint:watch gatsby:develop",
-    "validate": "npm-run-all -s prettier eslint:fix",
+    "validate": "npm-run-all -s prettier eslint",
     "gatsby:build": "gatsby build",
     "gatsby:develop": "gatsby develop --port 9000",
     "prettier": "prettier --write \"{,!(.cache|public)/**/}*.{js,json,jsx,md}\"",
     "prettier:watch": "onchange \"{,!(.cache|public)/**/}*.{js,json,jsx,md}\" -- prettier --write {{changed}}",
-    "eslint": "eslint --ext .js,.jsx .",
-    "eslint:fix": "eslint --fix --ext .js,.jsx .",
-    "eslint:watch": "onchange \"{,!(.cache|public)/**/}*.{js,jsx}\" -- eslint {{changed}}",
+    "eslint": "eslint --fix --ext .js,.jsx .",
+    "eslint:watch": "onchange \"{,!(.cache|public)/**/}*.{js,jsx}\" -- eslint --fix {{changed}}",
     "clean": "rm -rf .cache public"
   }
 }

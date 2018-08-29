@@ -1,19 +1,12 @@
 import React from "react";
 import CanvasBackground from "../components/CanvasBackground";
+import Transition from "../components/Transition";
 import "normalize.css";
 import "../components/styles/global.scss";
 
-export default ({ children, location, title }) => {
-  let pageTitle = title;
-  if (!pageTitle) {
-    pageTitle = location.pathname;
-    pageTitle = pageTitle.charAt(1).toUpperCase() + pageTitle.slice(2, -1);
-  }
-
-  return (
-    <div>
-      <CanvasBackground />
-      {children}
-    </div>
-  );
-};
+export default ({ children, location }) => (
+  <div>
+    <CanvasBackground />
+    <Transition location={location}>{children}</Transition>
+  </div>
+);

@@ -1,9 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
-import Transition from "./Transition";
 import siteConfig from "../../siteConfig";
-import "normalize.css";
-import "./styles/global.scss";
 import Navigation from "./Navigation";
 
 export default ({ children, location, title, width }) => {
@@ -29,11 +26,9 @@ export default ({ children, location, title, width }) => {
   return (
     <div className="layout" style={style}>
       <Helmet title={headTitle} />
-      <Transition location={location}>
-        <Navigation location={location} />
-        <div className="content">{children}</div>
-        {footer}
-      </Transition>
+      <Navigation location={location} />
+      <div className="content">{children}</div>
+      {footer}
     </div>
   );
 };
