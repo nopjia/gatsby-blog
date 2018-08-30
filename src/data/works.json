@@ -9,7 +9,7 @@
   },
   {
     "title": "Inescapable Identity",
-    "tags": ["traditional"],
+    "tags": ["traditional", "hidden"],
     "tools": "Charcoal on paper",
     "date": "2006-11-08",
     "desc": "Identity assignment, for Advanced Drawing at Milton Academy.",
@@ -17,7 +17,7 @@
   },
   {
     "title": "Colossus",
-    "tags": ["traditional"],
+    "tags": ["traditional", "hidden"],
     "tools": "Graphite, charcoal, pastels",
     "date": "2007-01-15",
     "desc": "Final project. Advanced Drawing, Milton Academy.",
@@ -405,7 +405,7 @@
   },
   {
     "title": "Audio Landscape",
-    "tags": ["graphics"],
+    "tags": ["graphics", "featured"],
     "tools": "Javascript, WebGL, WebAudio, Three.js",
     "date": "2015-08-26",
     "desc": "Put on some music, turn on your mic, and fly through this infinite audio landscape! Also works on mobile and other touch devices. Supports leap motion. See <a href=\"https://www.youtube.com/watch?v=-_iRgB-_sEM\">video</a>.",
@@ -433,7 +433,7 @@
   },
   {
     "title": "PBR Showcase",
-    "tags": ["graphics"],
+    "tags": ["graphics", "featured"],
     "tools": "Javascript, WebGL, Autodesk Play",
     "date": "2017-09-01",
     "desc": "Demo to showcase PBR capabilities of the Play engine, featuring the glTF Damaged Helmet. (Contact me directly for more information and demos for Play.)",

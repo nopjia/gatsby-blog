@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
-const getImageUrl = (url) =>
-  url.indexOf("http") === -1 ? `/portfolio/${url}` : url;
+const getImageUrl = (url) => (url.includes("http") ? url : `/portfolio/${url}`);
 
 export default ({ title, slug, image }) => (
   <Link className="item" to={slug}>
