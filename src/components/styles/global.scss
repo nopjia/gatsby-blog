@@ -8,6 +8,10 @@ $media-sm: 480px;
 $media-md: 768px;
 $spacing: 1.5rem;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $font-stack;
   background: $color-bg;
