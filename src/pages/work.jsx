@@ -17,11 +17,6 @@ export default ({ location, data }) => {
 
 export const pageQuery = graphql`
   query WorkQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allWorksJson(sort: { fields: date, order: DESC }) {
       edges {
         node {

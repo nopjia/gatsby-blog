@@ -14,12 +14,6 @@ export default ({ data, location }) => {
 
 export const pageQuery = graphql`
   query PageBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-        author
-      }
-    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html

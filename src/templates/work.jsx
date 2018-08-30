@@ -74,12 +74,6 @@ export default ({ data, location }) => {
 
 export const pageQuery = graphql`
   query WorkBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-        author
-      }
-    }
     worksJson(fields: { slug: { eq: $slug } }) {
       title
       desc
