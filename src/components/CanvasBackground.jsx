@@ -1,6 +1,9 @@
 import React from "react";
 import * as THREE from "three";
 
+// helper
+const derivativeOfEaseInOutCubic = (t) => -(2 * t - 1) * (2 * t - 1) + 1;
+
 // constants
 const _CAM_FOV = 45;
 const _CAM_Z = 12;
@@ -23,6 +26,11 @@ class CanvasBackground extends React.Component {
     this.colorMain = 0x0;
     this.colorBg = 0xffffff;
     this._lastTime = Date.now();
+
+    this._lastPageY = 0;
+    this._transitionStartTime = 0;
+    this._transitionDuration = 0;
+    this._transitionIsBackward = false;
 
     window.CANVAS_BACKGROUND = this;
   }
@@ -218,14 +226,12 @@ class CanvasBackground extends React.Component {
       }
     }
 
-    // calc scroll
-    const currY = window.pageYOffset;
-    if (this._lastPageY === undefined) {
-      this._lastPageY = currY;
-    }
-    const dy = _SCROLL_SPEED * (currY - this._lastPageY);
-    this._lastPageY = currY;
+    const dx = this.calcPageDx();
+    const dy = this.calcPageDy();
 
+    this.camera.position.x += dx;
+    bbox.min.x += dx;
+    bbox.max.x += dx;
     this.camera.position.y -= dy;
     bbox.min.y -= dy;
     bbox.max.y -= dy;
@@ -235,11 +241,35 @@ class CanvasBackground extends React.Component {
     }
   }
 
+  calcPageDy() {
+    const currY = window.pageYOffset;
+    const dy = _SCROLL_SPEED * (currY - this._lastPageY);
+    this._lastPageY = currY;
+    return dy;
+  }
+
+  calcPageDx() {
+    let currX = 0;
+    const t =
+      (this._lastTime - this._transitionStartTime) / this._transitionDuration;
+    let multiplier = _SCROLL_SPEED * window.innerWidth * 0.01;
+    if (this._transitionIsBackward) multiplier = -multiplier;
+    if (t <= 1) {
+      currX = multiplier * derivativeOfEaseInOutCubic(t, 0, 1);
+    }
+    return currX;
+  }
+
   calcDeltaTime() {
     const currTime = Date.now();
     const dt = 0.001 * (currTime - this._lastTime);
     this._lastTime = currTime;
     return dt;
+  }
+
+  triggerTransition(duration) {
+    this._transitionStartTime = this._lastTime;
+    this._transitionDuration = duration;
   }
 
   render() {

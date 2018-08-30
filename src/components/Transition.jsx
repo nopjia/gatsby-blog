@@ -7,13 +7,13 @@ import "./styles/transition.scss";
 
 const TIMEOUT = 500;
 
-const getTransitionStyle = (status, isBack) => {
+const getTransitionStyle = (status, isBackward) => {
   const styles = {
     entering: {
       position: "absolute",
       opacity: 0,
-      marginLeft: isBack ? "-50vw" : "50vw",
-      marginRight: isBack ? "50vw" : "-50vw",
+      marginLeft: isBackward ? "-50vw" : "50vw",
+      marginRight: isBackward ? "50vw" : "-50vw",
     },
     entered: {
       opacity: 1,
@@ -24,8 +24,8 @@ const getTransitionStyle = (status, isBack) => {
     },
     exiting: {
       opacity: 0,
-      marginLeft: isBack ? "50vw" : "-50vw",
-      marginRight: isBack ? "-50vw" : "50vw",
+      marginLeft: isBackward ? "50vw" : "-50vw",
+      marginRight: isBackward ? "-50vw" : "50vw",
       // transition: `all ${TIMEOUT}ms ease-in`,
       transition: `opacity ${TIMEOUT}ms ease-in, margin-left ${TIMEOUT}ms ease-in, margin-right ${TIMEOUT}ms ease-in`,
     },
@@ -69,11 +69,16 @@ class Transition extends React.Component {
             exit: TIMEOUT,
           }}
           onEntered={() => this.pushPrevPath(outsidePathname)}
+          onExit={() => window.CANVAS_BACKGROUND.triggerTransition(TIMEOUT * 2)}
         >
           {(status) => {
             const { location: insideLocation } = this.props;
             const insidePathname = insideLocation.pathname;
-            const isBack = this.prevPath2 === insidePathname;
+            const isBackward = this.prevPath2 === insidePathname;
+
+            // again, this is hack from observation
+            if (insidePathname !== this.prevPath1)
+              window.CANVAS_BACKGROUND._transitionIsBackward = isBackward;
 
             // I still don't understand what's going on here...
             console.log(
@@ -87,8 +92,9 @@ class Transition extends React.Component {
             return (
               <div
                 style={{
-                  ...getTransitionStyle(status, isBack),
+                  ...getTransitionStyle(status, isBackward),
                 }}
+                className="transition"
               >
                 {children}
               </div>
