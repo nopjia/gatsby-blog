@@ -240,6 +240,12 @@ blockquote {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
+  &.narrow {
+    @media (min-width: $media-md) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
   .item {
     .image-wrap {
       padding: 5px;

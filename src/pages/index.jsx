@@ -2,9 +2,11 @@ import React from "react";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import PostList from "../components/PostList";
+import WorkItem from "../components/WorkItem";
 
 export default ({ location, data }) => {
   const posts = data.allMarkdownRemark.edges;
+  const works = data.allWorksJson.edges;
 
   const introSection = (
     <div className="section">
@@ -45,24 +47,37 @@ export default ({ location, data }) => {
     </div>
   );
 
+  const worksSection = (
+    <div className="section">
+      <h1>Featured</h1>
+      <h2>recent cool projects</h2>
+      <div className="works narrow">
+        {works.map(({ node }) => (
+          <WorkItem
+            key={node.title}
+            title={node.title}
+            slug={node.fields.slug}
+            image={node.images[0]}
+          />
+        ))}
+      </div>
+      <p>
+        <Link to="/works/">see more projects →</Link>
+      </p>
+    </div>
+  );
+
   const postsSection = (
     <div className="section">
       <h1>Recent Articles</h1>
-      <div className="layout23">
-        <div>
-          <h2>
-            what
-            {"'"}s been on my mind
-          </h2>
-          <PostList edges={posts} />
-        </div>
-        <div>
-          <h2>read more</h2>
-          <p>
-            <Link to="/blog/">view all posts</Link>
-          </p>
-        </div>
-      </div>
+      <h2>
+        what
+        {"'"}s been on my mind
+      </h2>
+      <PostList edges={posts} />
+      <p>
+        <Link to="/blog/">read more →</Link>
+      </p>
     </div>
   );
 
@@ -97,7 +112,7 @@ export default ({ location, data }) => {
         <div>
           <h2>see also</h2>
           <p>
-            <a href="http://old.iamnop.com/">old website</a>
+            <a href="http://nopjia.blogspot.com/">old blog</a>
           </p>
         </div>
       </div>
@@ -107,6 +122,7 @@ export default ({ location, data }) => {
   return (
     <Layout location={location}>
       {introSection}
+      {worksSection}
       {postsSection}
       {furtherSection}
     </Layout>
@@ -122,13 +138,28 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 60)
+          excerpt(pruneLength: 90)
           fields {
             slug
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+          }
+        }
+      }
+    }
+    allWorksJson(
+      filter: { tags: { in: "featured" } }
+      sort: { fields: date, order: DESC }
+    ) {
+      edges {
+        node {
+          title
+          tags
+          images
+          fields {
+            slug
           }
         }
       }
