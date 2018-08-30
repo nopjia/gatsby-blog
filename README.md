@@ -1,11 +1,31 @@
-# gatsby-starter-blog
+# iamnop.com
 
-Gatsby starter for creating a blog
+My personal website at [https://www.iamnop.com/](https://www.iamnop.com/)
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
+Powered by [Gatsby](https://github.com/gatsbyjs/gatsby/), using [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog)
 
-`gatsby new gatsby-blog https://github.com/gatsbyjs/gatsby-starter-blog`
+## Commands
 
-## Running in development
+Start the development server, which also runs automatic Prettier and ESLint processes
 
-`gatsby develop`
+```shell
+npm run dev
+```
+
+Validate and build the project for distribution
+
+```shell
+npm run build
+```
+
+Run code checks through all files with Prettier and ESLint
+
+```shell
+npm run validate
+```
+
+Clean build files
+
+```shell
+npm run clean
+```
