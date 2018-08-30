@@ -50,7 +50,7 @@ export default ({ location, data }) => {
   const worksSection = (
     <div className="section">
       <h1>Featured</h1>
-      <h2>recent cool projects</h2>
+      <h2>recent projects</h2>
       <div className="works narrow">
         {works.map(({ node }) => (
           <WorkItem
@@ -76,8 +76,33 @@ export default ({ location, data }) => {
       </h2>
       <PostList edges={posts} />
       <p>
-        <Link to="/blog/">read more →</Link>
+        <Link to="/blog/">see all posts →</Link>
       </p>
+    </div>
+  );
+
+  const hireSection = (
+    <div className="section">
+      <h1>Hire Me</h1>
+      <div className="layout23">
+        <div>
+          <h2>need a graphics guy?</h2>
+          <p>
+            Looking for hand-crafted, high-end, interactive 3D experiences for
+            your website or product? I{"'"}m available for consulting,
+            freelance, and contract work.
+          </p>
+          <p>
+            <Link to="/hire/">read more →</Link>
+          </p>
+        </div>
+        <div>
+          <h2>download</h2>
+          <p>
+            <a href="https://www.iamnop.com/jiarathanakul.pdf">resume</a>
+          </p>
+        </div>
+      </div>
     </div>
   );
 
@@ -86,10 +111,7 @@ export default ({ location, data }) => {
       <h1>Further Reading</h1>
       <div className="layout23">
         <div>
-          <h2>
-            there
-            {"'"}s more older stuff
-          </h2>
+          <h2>some older stuff</h2>
           <p>
             If you
             {"'"}
@@ -124,6 +146,7 @@ export default ({ location, data }) => {
       {introSection}
       {worksSection}
       {postsSection}
+      {hireSection}
       {furtherSection}
     </Layout>
   );

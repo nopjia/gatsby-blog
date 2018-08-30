@@ -33,4 +33,4 @@ Please reach out to me directly for any inquiries!
 - **3D Tools:** Maya, MEL, Python, Unity
 - **Design:** Photoshop, Illustrator, InDesign
 
-Download my [resume](/jiarathanakul.pdf).
+Download my [resume](https://www.iamnop.com/jiarathanakul.pdf).

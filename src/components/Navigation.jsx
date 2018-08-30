@@ -22,7 +22,6 @@ class Navigation extends React.Component {
     const links = {
       Home: "/",
       Work: "/work/",
-      Hire: "/hire/",
       Contact: "/contact/",
     };
     const menu = (
