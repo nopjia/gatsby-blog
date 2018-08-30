@@ -6,6 +6,7 @@ $font-stack: "Vollkorn", Georgia, Times New Roman, Times, serif;
 
 $media-sm: 480px;
 $media-md: 768px;
+$spacing: 1.5rem;
 
 body {
   font-family: $font-stack;
@@ -62,9 +63,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 p {
   text-align: justify;
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 
 li {
@@ -121,14 +119,14 @@ blockquote {
 .layout {
   max-width: 600px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 $spacing;
   display: grid;
 }
 
 .navbar {
   border-bottom: 1px solid $color-25;
   margin-bottom: 5rem;
-  padding: 1.5rem 0;
+  padding: $spacing 0;
   font-size: 1.25rem;
   ul {
     list-style-type: none;
@@ -174,11 +172,11 @@ blockquote {
 }
 
 .footer {
-  margin-top: 5rem;
+  margin-top: calc(5rem - #{$spacing});
   color: $color-2;
   border-top: 1px solid $color-25;
   p {
-    padding: 1.5rem 0;
+    padding: $spacing 0;
     margin: 0;
   }
 }
@@ -210,8 +208,7 @@ blockquote {
 .postnav {
   list-style: none;
   padding: 0;
-  margin: 0;
-  margin-top: .5rem;
+  margin-left: 0;
 }
 
 .work-list {
@@ -231,8 +228,9 @@ blockquote {
 
 .works {
   display: grid;
-  column-gap: 1.5rem;
-  row-gap: 1.5rem;
+  column-gap: $spacing;
+  row-gap: $spacing;
+  margin-bottom: $spacing;
 
   @media (min-width: $media-sm) {
     grid-template-columns: 1fr 1fr;
@@ -308,10 +306,6 @@ blockquote {
 
   @media (min-width: $media-sm) {
     grid-template-columns: 2fr 1fr;
-
-    & > div > *:last-child {
-      margin-bottom: 0;
-    }
   }
 }
 
@@ -329,4 +323,13 @@ iframe {
   height: 100%;
   left: 0;
   top: 0;
+}
+
+.posts {
+  h3 {
+    margin-bottom: 0;
+  }
+  p {
+    margin-bottom: $spacing;
+  }
 }
