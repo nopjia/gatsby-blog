@@ -8,18 +8,6 @@ const getImageUrl = (url) => (url.includes("http") ? url : `/portfolio/${url}`);
 export default ({ data, location }) => {
   const work = data.worksJson;
 
-  let linkSection;
-  if (work.link) {
-    linkSection = (
-      <div>
-        <h4>Link</h4>
-        <p>
-          <a href={work.link}>{work.link}</a>
-        </p>
-      </div>
-    );
-  }
-
   const firstImageElem = (
     <Aimage image={getImageUrl(work.images[0])} title={work.title} />
   );
@@ -39,12 +27,29 @@ export default ({ data, location }) => {
     );
   }
 
+  let detailLinkElem;
+  if (work.link) {
+    detailLinkElem = (
+      <p>
+        <a href={work.link}>launch →</a>
+      </p>
+    );
+  }
+  let detailBlogElem;
+  if (work.blog) {
+    detailBlogElem = (
+      <p>
+        <a href={work.blog}>read more →</a>
+      </p>
+    );
+  }
   const detailElem = (
     <div className="detail">
       <h1>{work.title}</h1>
       <p className="secondary">{work.date}</p>
       <p dangerouslySetInnerHTML={{ __html: work.desc }} />
-      {linkSection}
+      {detailBlogElem}
+      {detailLinkElem}
       <h4>Tools</h4>
       <p>{work.tools}</p>
       <h4>Tags</h4>
@@ -79,8 +84,9 @@ export const pageQuery = graphql`
       tags
       tools
       date(formatString: "MMMM DD, YYYY")
-      link
       images
+      link
+      blog
       youtube
     }
   }

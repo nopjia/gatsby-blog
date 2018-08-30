@@ -272,8 +272,8 @@
     "tags": ["graphics"],
     "tools": "Javascript, GLSL, WebGL, Three.js",
     "date": "2011-12-20",
-    "desc": "Real-time renderer on WebGL with Global Illumination. Senior Design Project. Uses ray tracing and photon mapping. Effects include, direct lighting, indirect lighting, reflection, and refraction. See development blog for more info. ",
-    "link": "https://www.iamnop.com/webgl/",
+    "desc": "Real-time renderer on WebGL with Global Illumination. Senior Design Project. Uses ray tracing and photon mapping. Effects include, direct lighting, indirect lighting, reflection, and refraction.",
+    "blog": "http://nopjia.blogspot.com/search/label/photon",
     "images": ["photon_1.png", "photon_2.png"],
     "youtube": "zHqIbpATa2g"
   },
@@ -282,8 +282,9 @@
     "tags": ["graphics"],
     "tools": "Javascript, GLSL, WebGL, Three.js",
     "date": "2012-04-18",
-    "desc": "A real-time renderer on WebGL, uses the technique of ray marching distance fields. Final project for GPU Architecture class. More info on the development <a href=\"http://nopjia.blogspot.com/search/label/distance%20field\">blog</a>.",
+    "desc": "A real-time renderer on WebGL, uses the technique of ray marching distance fields. Final project for GPU Architecture class.",
     "link": "https://www.iamnop.com/raymarch/",
+    "blog": "http://nopjia.blogspot.com/search/label/distance%20field",
     "images": [
       "raymarch_1.png",
       "raymarch_2.png",
@@ -298,7 +299,6 @@
     "tools": "Java, Python, MEL",
     "date": "2011-01-22",
     "desc": "An Android app that turns the phone into a 3D controller. Implemented with a Maya plug-in. Controls rotation, panning, and zoom. Won \"Best Android App\" Award in the 2011 PennApps Mobile 48-hour hackathon.",
-    "link": "http://www.youtube.com/watch?v=ZJn0E5CMGlY",
     "images": ["droidxtend.jpg"],
     "youtube": "ZJn0E5CMGlY"
   },
@@ -315,8 +315,9 @@
     "tags": ["graphics"],
     "tools": "Javascript, GLSL, WebGL, Three.js",
     "date": "2012-08-21",
-    "desc": "A real-time volumetric renderer on WebGL. Simulates 3D textures using 2D texture atlas. Features transmittance-based lighting, volumetric self-shadowing, and multiple lights. More info on <a href=\"http://nopjia.blogspot.com/2012/09/webgl-volumetric-renderer.html\">blog</a>.",
+    "desc": "A real-time volumetric renderer on WebGL. Simulates 3D textures using 2D texture atlas. Features transmittance-based lighting, volumetric self-shadowing, and multiple lights.",
     "link": "https://www.iamnop.com/volumetric/",
+    "blog": "http://nopjia.blogspot.com/2012/09/webgl-volumetric-renderer.html",
     "images": ["volumetric.png"]
   },
   {
@@ -324,8 +325,9 @@
     "tags": ["graphics"],
     "tools": "Javascript, GLSL, WebGL, Three.js",
     "date": "2012-09-16",
-    "desc": "Interactive real-time music visualizer with live GLSL compilation. Completed for the 2012 PennApps 48-hour hackathon. More info at <a href=\"http://nopjia.blogspot.com/2012/09/codedj-live.html\">blog</a>.",
+    "desc": "Interactive real-time music visualizer with live GLSL compilation. Completed for the 2012 PennApps 48-hour hackathon.",
     "link": "http://git.to/codedjlive",
+    "blog": "http://nopjia.blogspot.com/2012/09/codedj-live.html",
     "images": ["codedj_1.png", "codedj_2.png", "codedj_3.png", "codedj_4.png"],
     "youtube": "bl11T112Jn0"
   },
@@ -342,8 +344,8 @@
     "tags": ["graphics", "web"],
     "tools": "Javascript, CSS Shaders",
     "date": "2013-01-20",
-    "desc": "Browse the internet through the comfort of an old-school CRT TV. Completed for the 2013 PennApps 48-hour hackathon. Won 3rd place overall and Audience Choice Award. Watch the presentation <a href=\"https://www.youtube.com/watch?v=8ZUCyN6yvps\">here</a>.",
-    "link": "http://nopjia.blogspot.com/2013/05/pennapps-spring-2013.html",
+    "desc": "Browse the internet through the comfort of an old-school CRT TV. Completed for the 2013 PennApps 48-hour hackathon. Won 3rd place overall and Audience Choice Award.",
+    "blog": "http://nopjia.blogspot.com/2013/05/pennapps-spring-2013.html",
     "images": ["webtube_1.jpg", "webtube_2.jpg"],
     "youtube": "8ZUCyN6yvps"
   },
@@ -369,10 +371,11 @@
   {
     "title": "WebGL GPU Particles",
     "tags": ["graphics"],
-    "tools": "Javascript, GLSL, WebGL, Three.js",
+    "tools": "Javascript, GLSL, WebGL",
     "date": "2014-04-12",
-    "desc": "Interactive real-time particle simulator on WebGL using GLSL shaders. More info on <a href=\"http://nopjia.blogspot.com/2014/06/webgl-gpu-particles.html\">blog</a>.",
-    "link": "http://nopjia.blogspot.com/2014/06/webgl-gpu-particles.html",
+    "desc": "Interactive real-time particle simulator on WebGL using GLSL shaders.",
+    "link": "https://www.iamnop.com/particles-mrt/",
+    "blog": "http://nopjia.blogspot.com/2014/06/webgl-gpu-particles.html",
     "images": [
       "webglparticles_1.png",
       "webglparticles_2.png",
@@ -385,7 +388,7 @@
     "tags": ["graphics"],
     "tools": "Javascript, GLSL, WebGL, Three.js",
     "date": "2015-04-07",
-    "desc": "Interactive particle simulation. Can target multiple shapes, both implicit functions and arbitrary meshes. Featured in <a href=\"https://experiments.withgoogle.com/particle-dream\">Chrome Experiments</a>.",
+    "desc": "Interactive particle simulation for your mind. Dive in and fly along the milky way or wave your hand through the star dust. What do you see? Is it a dog? A bear? Or a flower? Relax and let your mind run free. This is your dream. Featured in <a href=\"https://experiments.withgoogle.com/particle-dream\">Chrome Experiments</a>.",
     "link": "https://www.iamnop.com/particles/",
     "images": [
       "aparticledream_1.png",
@@ -408,7 +411,7 @@
     "tags": ["graphics", "featured"],
     "tools": "Javascript, WebGL, WebAudio, Three.js",
     "date": "2015-08-26",
-    "desc": "Put on some music, turn on your mic, and fly through this infinite audio landscape! Also works on mobile and other touch devices. Supports leap motion. See <a href=\"https://www.youtube.com/watch?v=-_iRgB-_sEM\">video</a>.",
+    "desc": "Put on some music, turn on your mic, and fly through this infinite audio landscape! Also works on mobile and other touch devices. Supports leap motion.",
     "link": "https://www.iamnop.com/procedural-landscape/",
     "images": ["procedurallandscape.png"],
     "youtube": "-_iRgB-_sEM"
@@ -418,8 +421,9 @@
     "tags": ["graphics"],
     "tools": "Javascript, WebGL, Autodesk Play",
     "date": "2016-06-15",
-    "desc": "Real-time show graphics made for the 2016 3D Web Fest at Fort Mason, San Francisco. More information <a href=\"http://codame.com/events/3d-web-fest-2016\">here</a>.",
+    "desc": "Real-time show graphics made for the 2016 3D Web Fest at Fort Mason, San Francisco.",
     "link": "https://www.iamnop.com/play/#webfest-planet",
+    "blog": "http://codame.com/events/3d-web-fest-2016",
     "images": ["https://pjia.bitbucket.io/boxes/10695342/ipsvsroj/preview.jpg"]
   },
   {
@@ -427,8 +431,9 @@
     "tags": ["graphics"],
     "tools": "Javascript, WebGL, Autodesk Play",
     "date": "2016-07-20",
-    "desc": "Collaboration between Smithsonian and Autodesk to digitize the \"Columbia\" Apollo 11 Command Module, to mark the 47th anniversary of the lunar landing mission. Full story <a href=\"https://3d.si.edu/apollo11cm/\">here</a>.",
+    "desc": "Collaboration between Smithsonian and Autodesk to digitize the \"Columbia\" Apollo 11 Command Module, to mark the 47th anniversary of the lunar landing mission.",
     "link": "https://www.iamnop.com/play/#apollo-pano-vr",
+    "blog": "https://newsdesk.si.edu/releases/smithsonian-releases-high-resolution-3-d-model-apollo-11-command-module-explore-and-print",
     "images": ["https://pjia.bitbucket.io/boxes/17795674/j0yk5f7u/preview.jpg"]
   },
   {
