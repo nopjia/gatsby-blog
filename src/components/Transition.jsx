@@ -3,7 +3,10 @@ import {
   TransitionGroup,
   Transition as ReactTransition,
 } from "react-transition-group";
+import initVerbose from "../utils/verbose";
 import "./styles/transition.scss";
+
+const verbose = initVerbose(false);
 
 const DURATION = 500;
 
@@ -87,7 +90,7 @@ class Transition extends React.Component {
           onExit={triggerTransition}
         >
           {(status) => {
-            console.log(
+            verbose(
               location.pathname,
               status,
               this.isBackward ? "backward" : "foward"

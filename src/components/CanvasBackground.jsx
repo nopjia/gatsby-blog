@@ -1,5 +1,8 @@
 import React from "react";
 import * as THREE from "three";
+import initVerbose from "../utils/verbose";
+
+const verbose = initVerbose(true);
 
 // helper
 const derivativeOfEaseInOutCubic = (t) => -(2 * t - 1) * (2 * t - 1) + 1;
@@ -47,7 +50,7 @@ class CanvasBackground extends React.Component {
     this.mount.removeChild(this.renderer.domElement);
     window.removeEventListener("resize", this.resize);
 
-    console.log("CanvasBackground unmount");
+    verbose("CanvasBackground unmount");
   }
 
   setColors(colorMain, colorBg) {
@@ -62,7 +65,7 @@ class CanvasBackground extends React.Component {
   }
 
   init() {
-    console.log("CanvasBackground init");
+    verbose("CanvasBackground init");
 
     this.renderer = new THREE.WebGLRenderer({
       canvas: this.canvas,

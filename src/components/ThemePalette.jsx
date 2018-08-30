@@ -2,6 +2,9 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 
 import React from "react";
+import initVerbose from "../utils/verbose";
+
+const verbose = initVerbose(true);
 
 const toHex = (x) => `0${parseInt(x, 10).toString(16)}`.slice(-2);
 const rgbToHex = (s) => {
@@ -42,7 +45,7 @@ class ThemePalette extends React.Component {
     // TODO: do this correctly the React way
     window.CANVAS_BACKGROUND.setColors(color, bgcolor);
 
-    console.log(`Theme: ${color},${bgcolor}`);
+    verbose(`Theme: ${color},${bgcolor}`);
   }
 
   render() {
