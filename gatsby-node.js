@@ -15,20 +15,26 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
   if (node.internal.type === "MarkdownRemark") {
-    const value = createFilePath({ node, getNode });
+    const slug = createFilePath({ node, getNode });
+    const type = slug.indexOf("posts") >= 0 ? "post" : "page";
     createNodeField({
-      name: "slug",
       node,
-      value,
+      name: "slug",
+      value: slug,
+    });
+    createNodeField({
+      node,
+      name: "type",
+      value: type,
     });
   }
 
   if (node.internal.type === "WorksJson") {
-    const value = slugify(node.title);
+    const slug = slugify(node.title);
     createNodeField({
-      name: "slug",
       node,
-      value,
+      name: "slug",
+      value: slug,
     });
   }
 };

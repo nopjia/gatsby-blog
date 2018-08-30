@@ -1,8 +1,12 @@
 import React from "react";
+import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
+import PostList from "../components/PostList";
 
-export default ({ location }) => (
-  <Layout location={location}>
+export default ({ location, data }) => {
+  const posts = data.allMarkdownRemark.edges;
+
+  const introSection = (
     <div className="section">
       <h1>Nop Jiarathanakul</h1>
       <div className="layout23">
@@ -39,21 +43,30 @@ export default ({ location }) => (
         </div>
       </div>
     </div>
+  );
 
+  const postsSection = (
     <div className="section">
       <h1>Recent Articles</h1>
-      <h2>
-        what
-        {"'"}s been on my mind
-      </h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet
-        ante tristique, consequat ante id, mattis risus. Vivamus nulla leo,
-        rhoncus eu ligula vel, vestibulum viverra tortor. Sed placerat erat eu
-        bibendum fringilla.
-      </p>
+      <div className="layout23">
+        <div>
+          <h2>
+            what
+            {"'"}s been on my mind
+          </h2>
+          <PostList edges={posts} />
+        </div>
+        <div>
+          <h2>read more</h2>
+          <p>
+            <Link to="/blog/">view all posts</Link>
+          </p>
+        </div>
+      </div>
     </div>
+  );
 
+  const furtherSection = (
     <div className="section">
       <h1>Further Reading</h1>
       <div className="layout23">
@@ -89,5 +102,36 @@ export default ({ location }) => (
         </div>
       </div>
     </div>
-  </Layout>
-);
+  );
+
+  return (
+    <Layout location={location}>
+      {introSection}
+      {postsSection}
+      {furtherSection}
+    </Layout>
+  );
+};
+
+export const pageQuery = graphql`
+  query IndexQuery {
+    allMarkdownRemark(
+      filter: { fields: { type: { eq: "post" } } }
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 2
+    ) {
+      edges {
+        node {
+          excerpt(pruneLength: 60)
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+          }
+        }
+      }
+    }
+  }
+`;
