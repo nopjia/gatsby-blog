@@ -7,25 +7,26 @@ Powered by [Gatsby](https://github.com/gatsbyjs/gatsby/), using [gatsby-starter-
 ## Commands
 
 Start the development server, which also runs automatic Prettier and ESLint processes
-
 ```shell
 npm run dev
 ```
 
 Validate and build the project for distribution
-
 ```shell
 npm run build
 ```
 
 Run code checks through all files with Prettier and ESLint
-
 ```shell
 npm run validate
 ```
 
 Clean build files
-
 ```shell
 npm run clean
+```
+
+Deploy the built project to https://github.com/nopjia/nopjia.github.io
+```shell
+npm run deploy
 ```
