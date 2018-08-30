@@ -76,7 +76,7 @@ export default ({ location, data }) => {
       </h2>
       <PostList edges={posts} />
       <p>
-        <Link to="/blog/">see all posts →</Link>
+        <Link to="/posts/">see all posts →</Link>
       </p>
     </div>
   );
