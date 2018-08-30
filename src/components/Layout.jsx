@@ -25,7 +25,9 @@ export default ({ children, location, title, width }) => {
   const style = width ? { maxWidth: `${width}px` } : {};
   return (
     <div className="layout" style={style}>
-      <Helmet title={headTitle} />
+      <Helmet title={headTitle}>
+        <meta name="description" content={siteConfig.description} />
+      </Helmet>
       <Navigation location={location} />
       <div className="content">{children}</div>
       {footer}
