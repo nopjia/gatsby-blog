@@ -283,7 +283,7 @@
     "tools": "Javascript, GLSL, WebGL, Three.js",
     "date": "2012-04-18",
     "desc": "A real-time renderer on WebGL, uses the technique of ray marching distance fields. Final project for GPU Architecture class.",
-    "link": "https://www.iamnop.com/raymarch/",
+    "link": "https://www.iamnop.com/WebGL-RayMarch/",
     "blog": "http://nopjia.blogspot.com/search/label/distance%20field",
     "images": [
       "raymarch_1.png",
@@ -316,7 +316,7 @@
     "tools": "Javascript, GLSL, WebGL, Three.js",
     "date": "2012-08-21",
     "desc": "A real-time volumetric renderer on WebGL. Simulates 3D textures using 2D texture atlas. Features transmittance-based lighting, volumetric self-shadowing, and multiple lights.",
-    "link": "https://www.iamnop.com/volumetric/",
+    "link": "https://www.iamnop.com/WebGL-Volumetric/",
     "blog": "http://nopjia.blogspot.com/2012/09/webgl-volumetric-renderer.html",
     "images": ["volumetric.png"]
   },
