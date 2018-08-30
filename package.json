@@ -9,6 +9,7 @@
     "url": ""
   },
   "dependencies": {
+    "@babel/core": "^7.0.0",
     "bluebird": "^3.5.1",
     "gatsby": "next",
     "gatsby-plugin-feed": "next",
