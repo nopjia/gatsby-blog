@@ -55,6 +55,7 @@ const createMarkdownPages = ({ graphql, actions }) => {
           node {
             fields {
               slug
+              type
             }
             frontmatter {
               title
@@ -68,25 +69,26 @@ const createMarkdownPages = ({ graphql, actions }) => {
       throw new Error(result.errors);
     }
 
-    // Create blog posts pages.
-    const posts = result.data.allMarkdownRemark.edges;
-    posts.forEach((post, index) => {
+    const createPageHelper = ({ node }, index, array) => {
       const previous =
-        index === posts.length - 1 ? null : posts[index + 1].node;
-      const next = index === 0 ? null : posts[index - 1].node;
-      const { slug } = post.node.fields;
-      const template = slug.indexOf("posts") >= 0 ? postTemplate : pageTemplate;
-
+        index === array.length - 1 ? null : array[index + 1].node;
+      const next = index === 0 ? null : array[index - 1].node;
+      const { slug, type } = node.fields;
       createPage({
         path: slug,
-        component: template,
+        component: type === "post" ? postTemplate : pageTemplate,
         context: {
           slug,
           previous,
           next,
         },
       });
-    });
+    };
+    const { edges } = result.data.allMarkdownRemark;
+    const posts = edges.filter(({ node }) => node.fields.type === "post");
+    const pages = edges.filter(({ node }) => node.fields.type === "page");
+    posts.forEach(createPageHelper);
+    pages.forEach(createPageHelper);
   });
 };
 
