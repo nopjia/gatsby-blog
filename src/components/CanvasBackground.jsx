@@ -249,15 +249,15 @@ class CanvasBackground extends React.Component {
   }
 
   calcPageDx() {
-    let currX = 0;
+    let dx = 0;
     const t =
       (this._lastTime - this._transitionStartTime) / this._transitionDuration;
-    let multiplier = _SCROLL_SPEED * window.innerWidth * 0.01;
-    if (this._transitionIsBackward) multiplier = -multiplier;
     if (t <= 1) {
-      currX = multiplier * derivativeOfEaseInOutCubic(t, 0, 1);
+      let multiplier = _SCROLL_SPEED * 0.01 * window.innerWidth;
+      if (this._transitionIsBackward) multiplier = -multiplier;
+      dx = multiplier * derivativeOfEaseInOutCubic(t);
     }
-    return currX;
+    return dx;
   }
 
   calcDeltaTime() {

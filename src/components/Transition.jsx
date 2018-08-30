@@ -5,7 +5,7 @@ import {
 } from "react-transition-group";
 import "./styles/transition.scss";
 
-const TIMEOUT = 500;
+const DURATION = 500;
 
 const getTransitionStyle = (status, isBackward) => {
   const styles = {
@@ -19,80 +19,79 @@ const getTransitionStyle = (status, isBackward) => {
       opacity: 1,
       marginLeft: 0,
       marginRight: 0,
-      // transition: `all ${TIMEOUT}ms ease-out`,
-      transition: `opacity ${TIMEOUT}ms ease-out, margin-left ${TIMEOUT}ms ease-out, margin-right ${TIMEOUT}ms ease-out`,
+      // transition: `all ${DURATION}ms ease-out`,
+      transition: `opacity ${DURATION}ms ease-out, margin-left ${DURATION}ms ease-out, margin-right ${DURATION}ms ease-out`,
     },
     exiting: {
       opacity: 0,
       marginLeft: isBackward ? "50vw" : "-50vw",
       marginRight: isBackward ? "-50vw" : "50vw",
-      // transition: `all ${TIMEOUT}ms ease-in`,
-      transition: `opacity ${TIMEOUT}ms ease-in, margin-left ${TIMEOUT}ms ease-in, margin-right ${TIMEOUT}ms ease-in`,
+      // transition: `all ${DURATION}ms ease-in`,
+      transition: `opacity ${DURATION}ms ease-in, margin-left ${DURATION}ms ease-in, margin-right ${DURATION}ms ease-in`,
     },
   };
   return styles[status];
 };
 
-// NOTE: explanation
-// we're remembering the previous 2 paths visited
-// we're pushing current path on "onEntered"
-// then during ReactTransition status update,
-// we check if "next going to path" is the same as previous path
-// if so, then we request the "backward" animation
+const triggerTransition = () => {
+  window.CANVAS_BACKGROUND.triggerTransition(DURATION * 2);
+};
 
 class Transition extends React.Component {
   constructor(props) {
     super(props);
-    this.prevPath1 = props.location.pathname;
-    this.prevPath2 = "";
-  }
 
-  pushPrevPath(pathname) {
-    this.prevPath2 = this.prevPath1;
-    this.prevPath1 = pathname;
+    this.isBackward = false;
+    this.timeoutId = undefined;
+
+    // HACK: set CANVAS_BACKGROUND directly
+    this.startBackward = () => {
+      this.isBackward = true;
+      window.CANVAS_BACKGROUND._transitionIsBackward = true;
+
+      // in case user clicks back quicker than DURATION
+      // we need to cancel the previous unresolved timeout
+      if (this.timeoutId) clearTimeout(this.timeoutId);
+
+      // then, sets timeout to reset isBackward state
+      this.timeoutId = setTimeout(() => {
+        window.CANVAS_BACKGROUND._transitionIsBackward = false;
+      }, DURATION * 2);
+    };
+
+    this.endBackward = () => {
+      this.isBackward = false;
+    };
+
+    if (window.history && window.history.pushState) {
+      window.addEventListener("popstate", this.startBackward);
+    }
   }
 
   render() {
     const { location, children } = this.props;
 
-    // NOTE: wtf this outside/inside pathnames
-    // did this by observation and trial and error
-    // I haven't wrapped my head around it...
-    const outsidePathname = location.pathname;
-
     return (
       <TransitionGroup>
         <ReactTransition
-          key={outsidePathname}
+          key={location.pathname}
           timeout={{
-            enter: TIMEOUT,
-            exit: TIMEOUT,
+            enter: DURATION,
+            exit: DURATION,
           }}
-          onEntered={() => this.pushPrevPath(outsidePathname)}
-          onExit={() => window.CANVAS_BACKGROUND.triggerTransition(TIMEOUT * 2)}
+          onExited={this.endBackward}
+          onExit={triggerTransition}
         >
           {(status) => {
-            const { location: insideLocation } = this.props;
-            const insidePathname = insideLocation.pathname;
-            const isBackward = this.prevPath2 === insidePathname;
-
-            // again, this is hack from observation
-            if (insidePathname !== this.prevPath1)
-              window.CANVAS_BACKGROUND._transitionIsBackward = isBackward;
-
-            // I still don't understand what's going on here...
             console.log(
-              `page:${outsidePathname}`,
-              `status:${status}`,
-              `history:${this.prevPath2} > ${
-                this.prevPath1
-              } > ${insidePathname},`
+              location.pathname,
+              status,
+              this.isBackward ? "backward" : "foward"
             );
-
             return (
               <div
                 style={{
-                  ...getTransitionStyle(status, isBackward),
+                  ...getTransitionStyle(status, this.isBackward),
                 }}
                 className="transition"
               >
