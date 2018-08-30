@@ -14,10 +14,14 @@ class ThemePalette extends React.Component {
   constructor(props) {
     super(props);
 
-    document.body.className = document.body.className || "white";
+    let theme = "white";
+    if (typeof window !== "undefined") {
+      theme = document.body.className || theme;
+      document.body.className = theme;
+    }
 
     this.state = {
-      theme: document.body.className,
+      theme,
     };
   }
 

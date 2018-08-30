@@ -32,7 +32,9 @@ class CanvasBackground extends React.Component {
     this._transitionDuration = 0;
     this._transitionIsBackward = false;
 
-    window.CANVAS_BACKGROUND = this;
+    if (typeof window !== "undefined") {
+      window.CANVAS_BACKGROUND = this;
+    }
   }
 
   componentDidMount() {

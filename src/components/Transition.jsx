@@ -63,7 +63,11 @@ class Transition extends React.Component {
       this.isBackward = false;
     };
 
-    if (window.history && window.history.pushState) {
+    if (
+      typeof window !== "undefined" &&
+      window.history &&
+      window.history.pushState
+    ) {
       window.addEventListener("popstate", this.startBackward);
     }
   }
