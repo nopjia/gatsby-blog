@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Aimage from "../components/Aimage";
 
@@ -39,7 +39,11 @@ export default ({ data, location }) => {
   if (work.blog) {
     detailBlogElem = (
       <p>
-        <a href={work.blog}>read more →</a>
+        {work.blog.includes("http") ? (
+          <a href={work.blog}>read more →</a>
+        ) : (
+          <Link to={work.blog}>read more →</Link>
+        )}
       </p>
     );
   }
