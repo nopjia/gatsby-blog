@@ -99,7 +99,7 @@ export default ({ location, data }) => {
         <div>
           <h2>download</h2>
           <p>
-            <a href="https://www.iamnop.com/jiarathanakul.pdf">resume</a>
+            <a href="/jiarathanakul.pdf">resume</a>
           </p>
         </div>
       </div>

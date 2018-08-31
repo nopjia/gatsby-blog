@@ -18,7 +18,9 @@ export default ({ children, location, title, width }) => {
 
   const footer = (
     <div className="footer">
-      <p>Copyright &copy; {new Date().getFullYear()} Nop Jiarathanakul</p>
+      <p>
+        Copyright &copy; {new Date().getFullYear()} {siteConfig.author}
+      </p>
     </div>
   );
 

@@ -47,7 +47,7 @@ export default ({ location }) => (
             </a>
           </li>
           <li>
-            <a href="jiarathanakul.pdf">
+            <a href="/jiarathanakul.pdf">
               <FaFileAlt />
               download resume
             </a>
