@@ -16,32 +16,25 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   if (node.internal.type === "MarkdownRemark") {
     const filepath = createFilePath({ node, getNode });
-    const type = filepath.includes("posts") ? "post" : "page";
-    const { title, date } = node.frontmatter;
-    const dirname = path.dirname(filepath);
-    let slug = "";
-    if (type === "post") slug += `${date}-`;
-    slug += slugify(title);
-    slug = path.join(dirname, slug);
-    createNodeField({
-      node,
-      name: "slug",
-      value: slug,
-    });
-    createNodeField({
-      node,
-      name: "type",
-      value: type,
-    });
+
+    let type;
+    let slug;
+    if (filepath.includes("posts")) {
+      type = "post";
+      const { title, date } = node.frontmatter;
+      slug = path.join(path.dirname(filepath), `${date}-${title}`);
+    } else {
+      type = "page";
+      slug = filepath;
+    }
+
+    createNodeField({ node, name: "slug", value: slug });
+    createNodeField({ node, name: "type", value: type });
   }
 
   if (node.internal.type === "WorksJson") {
-    const slug = slugify(node.title);
-    createNodeField({
-      node,
-      name: "slug",
-      value: slug,
-    });
+    const slug = `/works/${slugify(node.title)}`;
+    createNodeField({ node, name: "slug", value: slug });
   }
 };
 
