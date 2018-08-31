@@ -18,7 +18,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     const filepath = createFilePath({ node, getNode });
     const type = filepath.includes("posts") ? "post" : "page";
     const { title, date } = node.frontmatter;
-    const slug = `${date}-${slugify(title)}`;
+    const dirname = path.dirname(filepath);
+    let slug = "";
+    if (type === "post") slug += `${date}-`;
+    slug += slugify(title);
+    slug = path.join(dirname, slug);
     createNodeField({
       node,
       name: "slug",
