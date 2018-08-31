@@ -69,7 +69,7 @@ export default ({ location, data }) => {
 
   const postsSection = (
     <div className="section">
-      <h1>Recent Articles</h1>
+      <h1>Articles</h1>
       <h2>
         what
         {"'"}s been on my mind

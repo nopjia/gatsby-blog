@@ -10,7 +10,10 @@ export default ({ data, pageContext, location }) => {
     <Layout location={location} title={post.frontmatter.title}>
       <h1>{post.frontmatter.title}</h1>
       <p className="secondary">{post.frontmatter.date}</p>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <div
+        className="markdown"
+        dangerouslySetInnerHTML={{ __html: post.html }}
+      />
       <ul className="postnav">
         {next && (
           <li>
