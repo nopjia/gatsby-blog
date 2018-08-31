@@ -5,12 +5,14 @@ import Navigation from "./Navigation";
 
 export default ({ children, location, title, width }) => {
   let pageTitle = title;
-  if (!pageTitle) pageTitle = location.pathname.slice(1, -1);
-  if (pageTitle)
-    pageTitle = pageTitle
-      .split("-")
-      .map((word) => word.replace(word[0], word[0].toUpperCase()))
-      .join(" ");
+  if (!pageTitle) {
+    pageTitle = location.pathname.slice(1, -1);
+    if (pageTitle)
+      pageTitle = pageTitle
+        .split("-")
+        .map((word) => word.replace(word[0], word[0].toUpperCase()))
+        .join(" ");
+  }
   if (pageTitle) pageTitle = `${pageTitle} | ${siteConfig.title}`;
   else pageTitle = siteConfig.title;
 
