@@ -258,7 +258,7 @@ class CanvasBackground extends React.Component {
     const t =
       (this._lastTime - this._transitionStartTime) / this._transitionDuration;
     if (t <= 1) {
-      let multiplier = _SCROLL_SPEED * 0.01 * window.innerWidth;
+      let multiplier = _SCROLL_SPEED * 0.02 * window.innerWidth;
       if (this._transitionIsBackward) multiplier = -multiplier;
       dx = multiplier * derivativeOfEaseInOutCubic(t);
     }
