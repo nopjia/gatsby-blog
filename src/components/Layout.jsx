@@ -5,16 +5,14 @@ import Navigation from "./Navigation";
 
 export default ({ children, location, title, width }) => {
   let pageTitle = title;
-  if (!pageTitle) {
-    pageTitle = location.pathname;
-    pageTitle = pageTitle.charAt(1).toUpperCase() + pageTitle.slice(2, -1);
-  }
-  let headTitle;
-  if (pageTitle) {
-    headTitle = `${pageTitle} | ${siteConfig.title}`;
-  } else {
-    headTitle = siteConfig.title;
-  }
+  if (!pageTitle) pageTitle = location.pathname.slice(1, -1);
+  if (pageTitle)
+    pageTitle = pageTitle
+      .split("-")
+      .map((word) => word.replace(word[0], word[0].toUpperCase()))
+      .join(" ");
+  if (pageTitle) pageTitle = `${pageTitle} | ${siteConfig.title}`;
+  else pageTitle = siteConfig.title;
 
   const footer = (
     <div className="footer">
@@ -27,7 +25,7 @@ export default ({ children, location, title, width }) => {
   const style = width ? { maxWidth: `${width}px` } : {};
   return (
     <div className="layout" style={style}>
-      <Helmet title={headTitle}>
+      <Helmet title={pageTitle}>
         <meta name="description" content={siteConfig.description} />
       </Helmet>
       <Navigation location={location} />
