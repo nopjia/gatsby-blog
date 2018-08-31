@@ -54,13 +54,14 @@
     "build": "npm-run-all -s validate gatsby:build",
     "dev": "npm-run-all -p prettier:watch eslint:watch gatsby:develop",
     "validate": "npm-run-all -s prettier eslint",
-    "deploy": "gh-pages --dist public --branch master --repo https://github.com/nopjia/nopjia.github.io",
+    "deploy": "npm-run-all -s clean build ghpages",
     "gatsby:build": "gatsby build",
     "gatsby:develop": "gatsby develop --port 9000",
     "prettier": "prettier --write \"{,!(.cache|public)/**/}*.{js,json,jsx,md}\"",
     "prettier:watch": "onchange \"{,!(.cache|public)/**/}*.{js,json,jsx,md}\" -- prettier --write {{changed}}",
     "eslint": "eslint --fix --ext .js,.jsx .",
     "eslint:watch": "onchange \"{,!(.cache|public)/**/}*.{js,jsx}\" -- eslint --fix {{changed}}",
+    "ghpages": "gh-pages --dist public --branch master --repo https://github.com/nopjia/nopjia.github.io",
     "clean": "rm -rf .cache public"
   }
 }

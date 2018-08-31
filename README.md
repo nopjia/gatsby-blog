@@ -1,4 +1,4 @@
-# iamnop.com
+# gatsby-blog
 
 My personal website at [https://www.iamnop.com/](https://www.iamnop.com/)
 
@@ -30,7 +30,7 @@ Clean build files
 npm run clean
 ```
 
-Deploy the built project to https://github.com/nopjia/nopjia.github.io
+Run a clean build and deploy project to GitHub Pages https://github.com/nopjia/nopjia.github.io
 
 ```shell
 npm run deploy
