@@ -4,13 +4,11 @@
 import React from "react";
 import WorkItem from "./WorkItem";
 
-const HIDDEN_CATEGORIES = ["featured", "hidden"];
-
 class WorkList extends React.Component {
   constructor() {
     super();
     this.state = {
-      category: "graphics",
+      category: "featured",
     };
   }
 
@@ -26,11 +24,9 @@ class WorkList extends React.Component {
         });
         return acc;
       },
-      { all: true }
+      { all: true, featured: true }
     );
-    HIDDEN_CATEGORIES.forEach((c) => {
-      delete categories[c];
-    });
+    delete categories.hidden;
 
     // build category links
     const categoryLinks = [];

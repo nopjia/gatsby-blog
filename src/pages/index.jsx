@@ -6,7 +6,7 @@ import WorkItem from "../components/WorkItem";
 
 export default ({ location, data }) => {
   const posts = data.allMarkdownRemark.edges;
-  const works = data.allWorksJson.edges;
+  const works = [data.allWorksJson.edges[0], data.allWorksJson.edges[3]]; // manually picking 2 featured items
 
   const introSection = (
     <div className="section">
@@ -175,6 +175,7 @@ export const pageQuery = graphql`
     allWorksJson(
       filter: { tags: { in: "featured" } }
       sort: { fields: date, order: DESC }
+      limit: 10
     ) {
       edges {
         node {

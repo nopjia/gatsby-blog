@@ -317,7 +317,7 @@
     "date": "2012-08-21",
     "desc": "A real-time volumetric renderer on WebGL. Simulates 3D textures using 2D texture atlas. Features transmittance-based lighting, volumetric self-shadowing, and multiple lights.",
     "link": "https://www.iamnop.com/WebGL-Volumetric/",
-    "blog": "http://nopjia.blogspot.com/2012/09/webgl-volumetric-renderer.html",
+    "blog": "2012-09-20-webgl-volumetric-renderer",
     "images": ["volumetric.png"]
   },
   {
@@ -345,7 +345,7 @@
     "tools": "Javascript, CSS Shaders",
     "date": "2013-01-20",
     "desc": "Browse the internet through the comfort of an old-school CRT TV. Completed for the 2013 PennApps 48-hour hackathon. Won 3rd place overall and Audience Choice Award.",
-    "blog": "/posts/2013-05-16-webtube",
+    "blog": "2013-05-16-webtube",
     "images": ["webtube_1.jpg", "webtube_2.jpg"],
     "youtube": "8ZUCyN6yvps"
   },
@@ -365,7 +365,7 @@
     "date": "2013-07-21",
     "desc": "Interactive real-time iterative path tracer in CUDA. Final project for Advanced Rendering Seminar.",
     "link": "https://github.com/nopjia/tracer",
-    "blog": "/posts/2013-07-25-cuda-path-tracer",
+    "blog": "2013-07-25-cuda-path-tracer",
     "images": ["cudatracer_1.jpg", "cudatracer_2.jpg", "cudatracer_3.jpg"],
     "youtube": "mbpqxlJHaBE"
   },
@@ -376,7 +376,7 @@
     "date": "2014-04-12",
     "desc": "Interactive real-time particle simulator on WebGL using GLSL shaders.",
     "link": "https://www.iamnop.com/particles-mrt/",
-    "blog": "/posts/2014-06-08-webgl-gpu-particles",
+    "blog": "2014-06-08-webgl-gpu-particles",
     "images": [
       "webglparticles_1.png",
       "webglparticles_2.png",
@@ -386,7 +386,7 @@
   },
   {
     "title": "A Particle Dream",
-    "tags": ["graphics"],
+    "tags": ["graphics", "featured"],
     "tools": "Javascript, GLSL, WebGL, Three.js",
     "date": "2015-04-07",
     "desc": "Interactive particle simulation for your mind. Dive in and fly along the milky way or wave your hand through the star dust. What do you see? Is it a dog? A bear? Or a flower? Relax and let your mind run free. This is your dream. Featured in <a href=\"https://experiments.withgoogle.com/particle-dream\">Chrome Experiments</a>.",
@@ -400,7 +400,7 @@
   },
   {
     "title": "lmv.rocks",
-    "tags": ["graphics", "web"],
+    "tags": ["graphics", "web", "featured"],
     "tools": "Javascript, WebGL, Polymer, Autodesk Viewing API",
     "date": "2015-06-22",
     "desc": "Custom showcase gallery built using Polymer, Google Material Library, and Autodesk Viewing API.",
@@ -419,7 +419,7 @@
   },
   {
     "title": "3D Web Fest Graphic",
-    "tags": ["graphics"],
+    "tags": ["graphics", "featured"],
     "tools": "Javascript, WebGL, Autodesk Play",
     "date": "2016-06-15",
     "desc": "Real-time show graphics made for the 2016 3D Web Fest at Fort Mason, San Francisco.",
@@ -429,7 +429,7 @@
   },
   {
     "title": "Apollo 11",
-    "tags": ["graphics"],
+    "tags": ["graphics", "featured"],
     "tools": "Javascript, WebGL, Autodesk Play",
     "date": "2016-07-20",
     "desc": "Collaboration between Smithsonian and Autodesk to digitize the \"Columbia\" Apollo 11 Command Module, to mark the 47th anniversary of the lunar landing mission.",

@@ -42,7 +42,7 @@ export default ({ data, location }) => {
         {work.blog.includes("http") ? (
           <a href={work.blog}>read more →</a>
         ) : (
-          <Link to={work.blog}>read more →</Link>
+          <Link to={`/posts/${work.blog}`}>read more →</Link>
         )}
       </p>
     );
