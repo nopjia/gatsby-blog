@@ -6,7 +6,7 @@ tags: ["code"]
 
 This post marks the launch of a new long overdue website!
 
-![www.iamnop.com](/portfolio/new-website.png)
+![www.iamnop.com](screenshot.png)
 
 I released my current website at https://www.iamnop.com/ a long time ago, but it was practically a placeholder with almost no content. Now I've rebuilt it from the ground up with [React](https://reactjs.org/) and a powerful site generator [Gatsby](https://www.gatsbyjs.org/).
 

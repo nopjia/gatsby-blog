@@ -38,13 +38,6 @@ module.exports = {
         ],
       },
     },
-    "gatsby-transformer-json",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: "./src/data/",
-      },
-    },
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     {
@@ -57,6 +50,13 @@ module.exports = {
     "gatsby-plugin-offline",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
+    "gatsby-transformer-json",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: "./src/data/",
+      },
+    },
     {
       resolve: "gatsby-plugin-layout",
       options: {
