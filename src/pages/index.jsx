@@ -83,7 +83,7 @@ export default ({ location, data }) => {
 
   const hireSection = (
     <div className="section">
-      <h1>Hire Me</h1>
+      <h1>Hire</h1>
       <div className="layout23">
         <div>
           <h2>need a graphics guy?</h2>

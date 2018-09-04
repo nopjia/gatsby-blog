@@ -3,7 +3,7 @@ title: Hire
 date: "2018-08-04T01:35:46.089Z"
 ---
 
-# Hire Me
+# Hire
 
 ## need a graphics guy?
 

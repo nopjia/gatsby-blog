@@ -68,7 +68,6 @@ class CanvasBackground extends React.Component {
     verbose("CanvasBackground init");
 
     this.renderer = new THREE.WebGLRenderer({
-      canvas: this.canvas,
       stencil: false,
       antialias: true,
     });
@@ -98,6 +97,7 @@ class CanvasBackground extends React.Component {
 
   stop() {
     cancelAnimationFrame(this.frameId);
+    this.frameId = undefined;
   }
 
   resize() {
