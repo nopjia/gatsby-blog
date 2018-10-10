@@ -7,7 +7,7 @@ date: "2018-08-04T01:35:46.089Z"
 
 ## need a graphics guy?
 
-Looking for hand-crafted, high-end, interactive 3D experiences for your website or product? I'm available for consulting, freelance, and contract work.
+Looking for hand-crafted, high-end, interactive 3D experiences for your website or product? I'm available for freelance and consulting work.
 Based in San Francisco Bay Area.
 Available for both on-site and remote projects.
 Please reach out to me directly for any inquiries!

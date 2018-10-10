@@ -9,7 +9,11 @@ export default ({ data, location }) => {
   const work = data.worksJson;
 
   const firstImageElem = (
-    <Aimage image={getImageUrl(work.images[0])} title={work.title} />
+    <Aimage
+      link={work.link}
+      image={getImageUrl(work.images[0])}
+      title={work.title}
+    />
   );
   const restOfImages = work.images.slice(1);
 

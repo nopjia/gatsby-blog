@@ -89,8 +89,8 @@ export default ({ location, data }) => {
           <h2>need a graphics guy?</h2>
           <p>
             Looking for hand-crafted, high-end, interactive 3D experiences for
-            your website or product? I{"'"}m available for consulting,
-            freelance, and contract work.
+            your website or product? I{"'"}m available for freelance and
+            consulting work.
           </p>
           <p>
             <Link to="/hire/">read more →</Link>
