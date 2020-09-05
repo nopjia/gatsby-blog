@@ -9,7 +9,7 @@ export default ({ location, data }) => {
   return (
     <Layout location={location} width={900}>
       <h1>Work</h1>
-      <h2>what {"I've"} been working on</h2>
+      <h2>what I&apos;ve been working on</h2>
       <WorkList items={items} />
     </Layout>
   );

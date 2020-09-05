@@ -15,8 +15,9 @@ export default ({ location, data }) => {
         <div>
           <h2>creative coder</h2>
           <p>
-            Hello! I{"'"}m 75% technologist, 25% artist, and 100% perfectionist.
-            I love making things, especially pretty 3D things with code!
+            Hello! I&apos;m 75% technologist, 25% artist, and 100%
+            perfectionist. I love making things, especially pretty 3D things
+            with code!
           </p>
           <p>
             My background is in computer graphics, games, and animation. I
@@ -24,7 +25,7 @@ export default ({ location, data }) => {
             <a href="http://www.upenn.edu/">University of Pennsylvania</a> in{" "}
             <a href="http://cg.cis.upenn.edu/">computer graphics</a>. Then I
             went on to work in animation and gaming for a while at various
-            places. Now I{"'"}m at{" "}
+            places. Now I&apos;m at{" "}
             <a href="http://www.autodesk.com/">Autodesk</a> working on an
             exciting <a href="http://lmv.rocks/">new web viewer</a>.
           </p>
@@ -70,10 +71,7 @@ export default ({ location, data }) => {
   const postsSection = (
     <div className="section">
       <h1>Articles</h1>
-      <h2>
-        what
-        {"'"}s been on my mind
-      </h2>
+      <h2>what&apos;s been on my mind</h2>
       <PostList edges={posts} />
       <p>
         <Link to="/posts/">see all posts →</Link>
@@ -89,7 +87,7 @@ export default ({ location, data }) => {
           <h2>need a graphics guy?</h2>
           <p>
             Looking for hand-crafted, high-end, interactive 3D experiences for
-            your website or product? I{"'"}m available for freelance and
+            your website or product? I&apos;m available for freelance and
             consulting work.
           </p>
           <p>
@@ -113,9 +111,7 @@ export default ({ location, data }) => {
         <div>
           <h2>some older stuff</h2>
           <p>
-            If you
-            {"'"}
-            re feeling curious, you can look around my{" "}
+            If you&apos;re feeling curious, you can look around my{" "}
             <a href="http://old.iamnop.com/">old website</a>, when I was still
             in college and jQuery was all the rage. In my defense, it was a
             decent website for 2010. It even got featured{" "}
@@ -127,8 +123,8 @@ export default ({ location, data }) => {
               here
             </a>
             , and <a href="https://onepagelove.com/nop-jiarathanakul">here</a>.
-            Feel free to look around at my older stuff—just don
-            {"'"}t tease me about them later!
+            Feel free to look around at my older stuff—just don&apos;t tease me
+            about them later!
           </p>
         </div>
         <div>

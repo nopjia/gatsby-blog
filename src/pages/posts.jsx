@@ -9,10 +9,7 @@ export default ({ data, location }) => {
   return (
     <Layout location={location}>
       <h1>Articles</h1>
-      <h2>
-        what
-        {"'"}s been on my mind
-      </h2>
+      <h2>what&apos;s been on my mind</h2>
       <PostList edges={posts} />
     </Layout>
   );

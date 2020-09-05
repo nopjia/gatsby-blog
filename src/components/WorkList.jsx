@@ -59,8 +59,8 @@ class WorkList extends React.Component {
 
     // filter items
     items = items.filter((item) => !item.tags.includes("hidden"));
-    items = items.filter(
-      (item) => (category === "all" ? true : item.tags.includes(category))
+    items = items.filter((item) =>
+      category === "all" ? true : item.tags.includes(category)
     );
 
     return (

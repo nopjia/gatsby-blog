@@ -54,18 +54,17 @@ class ThemePalette extends React.Component {
 
     return (
       <div className="theme-palette">
-        {themes.map(
-          (t) =>
-            t === theme ? (
-              <div
-                key={t}
-                data-palette={t}
-                onClick={() => this.setTheme(t)}
-                className="selected"
-              />
-            ) : (
-              <div key={t} data-palette={t} onClick={() => this.setTheme(t)} />
-            )
+        {themes.map((t) =>
+          t === theme ? (
+            <div
+              key={t}
+              data-palette={t}
+              onClick={() => this.setTheme(t)}
+              className="selected"
+            />
+          ) : (
+            <div key={t} data-palette={t} onClick={() => this.setTheme(t)} />
+          )
         )}
       </div>
     );
