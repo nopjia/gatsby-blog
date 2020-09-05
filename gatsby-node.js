@@ -22,7 +22,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     if (filepath.includes("posts")) {
       type = "post";
       const { title, date } = node.frontmatter;
-      slug = path.join(path.dirname(filepath), `${date}-${slugify(title)}`);
+      slug = `${path.dirname(filepath)}/${date}-${slugify(title)}`;
     } else {
       type = "page";
       slug = filepath;
