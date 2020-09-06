@@ -439,11 +439,25 @@
   },
   {
     "title": "PBR Showcase",
-    "tags": ["graphics", "featured"],
+    "tags": ["graphics"],
     "tools": "Javascript, WebGL, Autodesk Play",
     "date": "2017-09-01",
     "desc": "Demo to showcase PBR capabilities of the Play engine, featuring the glTF Damaged Helmet. (Contact me directly for more information and demos for Play.)",
     "link": "https://www.iamnop.com/play/#helmet",
     "images": ["https://pjia.bitbucket.io/boxes/9817600/jb4c1872/preview.jpg"]
+  },
+  {
+    "title": "Rubik's Snake",
+    "tags": ["graphics", "featured"],
+    "tools": "Javascript, WebGL, Three.js, React, Loopback",
+    "date": "2020-09-06",
+    "desc": "Play with the Rubik's Snake toy in 3D right in your browser! Come up with your own designs and submit them to share with the world.",
+    "link": "https://www.iamnop.com/snake",
+    "images": [
+      "rubikssnake_propeller.png",
+      "rubikssnake_swan.png",
+      "rubikssnake_frog.png",
+      "rubikssnake_ball.png"
+    ]
   }
 ]
