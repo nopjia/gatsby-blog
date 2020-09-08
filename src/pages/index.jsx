@@ -20,14 +20,14 @@ export default ({ location, data }) => {
             with code!
           </p>
           <p>
-            My background is in computer graphics, games, and animation. I
-            graduated from the{" "}
-            <a href="http://www.upenn.edu/">University of Pennsylvania</a> in{" "}
-            <a href="http://cg.cis.upenn.edu/">computer graphics</a>. Then I
-            went on to work in animation and gaming for a while at various
-            places. Now I&apos;m at{" "}
-            <a href="http://www.autodesk.com/">Autodesk</a> working on an
-            exciting <a href="http://lmv.rocks/">new web viewer</a>.
+            My background is in{" "}
+            <a href="http://cg.cis.upenn.edu/">computer graphics</a>, games, and
+            animation. Since 2010, I&apos;ve been an enthusiast of{" "}
+            <a href="https://www.khronos.org/webgl/">WebGL</a> and{" "}
+            <a href="https://threejs.org/">Three.js</a>, and have made it my
+            career and hobby. I now live in San Francisco, where I organized{" "}
+            <a href="https://3dwebfest.splashthat.com/">3D Web Fest</a> for 3
+            years.
           </p>
         </div>
         <div>
