@@ -454,10 +454,9 @@
     "desc": "Play with the Rubik's Snake toy in 3D right in your browser! Come up with your own designs and submit them to share with the world.",
     "link": "https://www.iamnop.com/snake",
     "images": [
-      "rubikssnake_propeller.png",
-      "rubikssnake_swan.png",
-      "rubikssnake_frog.png",
-      "rubikssnake_ball.png"
+      "rubikssnake_1.png",
+      "rubikssnake_2.png",
+      "rubikssnake_3.png"
     ]
   }
 ]
