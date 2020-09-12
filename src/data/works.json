@@ -448,7 +448,7 @@
   },
   {
     "title": "Rubik's Snake",
-    "tags": ["graphics", "featured"],
+    "tags": ["graphics", "web", "featured"],
     "tools": "Javascript, WebGL, Three.js, React, Loopback",
     "date": "2020-09-06",
     "desc": "Play with the Rubik's Snake toy in 3D right in your browser! Come up with your own designs and submit them to share with the world.",
