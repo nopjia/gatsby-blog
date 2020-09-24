@@ -1,7 +1,7 @@
 ---
 title: Why I'm Not Playing Pokémon Go
 date: "2016-07-16"
-tags: ["games"]
+tags: ["games", "opinion"]
 ---
 
 ![Pokemon Sun Moon](pokemon-sun-moon.jpg)
