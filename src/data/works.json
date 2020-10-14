@@ -433,9 +433,14 @@
     "tools": "Javascript, WebGL, Autodesk Play",
     "date": "2016-07-20",
     "desc": "Collaboration between Smithsonian and Autodesk to digitize the \"Columbia\" Apollo 11 Command Module, to mark the 47th anniversary of the lunar landing mission.",
-    "link": "https://www.iamnop.com/play/#apollo-pano-vr",
+    "link": "https://legacy.3d.si.edu/apollo11cm/index.php",
     "blog": "https://newsdesk.si.edu/releases/smithsonian-releases-high-resolution-3-d-model-apollo-11-command-module-explore-and-print",
-    "images": ["https://pjia.bitbucket.io/boxes/17795674/j0yk5f7u/preview.jpg"]
+    "images": [
+      "apollo11cm_1.jpg",
+      "apollo11cm_2.jpg",
+      "apollo11cm_3.jpg",
+      "apollo11cm_4.jpg"
+    ]
   },
   {
     "title": "PBR Showcase",
