@@ -4,7 +4,7 @@ date: "2020-01-05"
 tags: ["opinion"]
 ---
 
-[![thumb](https://img.youtube.com/vi/mVKuCbjFfIY/0.jpg)](https://www.youtube.com/watch?v=mVKuCbjFfIY)
+`youtube: https://www.youtube.com/watch?v=mVKuCbjFfIY`
 
 About the first 3 years of moving to San Franciso, I became obsessed with wine (thanks, of course, to the world renowned Napa Valley.) I would buy \$50, \$80, \$100 bottle wines, cases of them. (One time I bought a \$300 bottle wine and even received a certificate for it!)
 
