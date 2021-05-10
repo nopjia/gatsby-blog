@@ -443,6 +443,16 @@
     ]
   },
   {
+    "title": "Veronica Scanner 3D Portraiture",
+    "tags": ["graphics"],
+    "tools": "Javascript, WebGL, Autodesk Play",
+    "date": "2016-09-02",
+    "desc": "Collaboration with Factum Arte and Royal Academy of Arts to scan and publish over a thousand 3D photogrammetry portraits.",
+    "link": "http://ra2016.projectplay.rocks/",
+    "blog": "https://www.royalacademy.org.uk/exhibition/projects-the-veronica-scanner",
+    "images": ["ra2016.jpg"]
+  },
+  {
     "title": "PBR Showcase",
     "tags": ["graphics"],
     "tools": "Javascript, WebGL, Autodesk Play",
