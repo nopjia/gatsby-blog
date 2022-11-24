@@ -22,12 +22,14 @@ export default ({ location, data }) => {
           <p>
             My background is in{" "}
             <a href="http://cg.cis.upenn.edu/">computer graphics</a>, games, and
-            animation. Since 2010, I&apos;ve been an enthusiast of{" "}
-            <a href="https://www.khronos.org/webgl/">WebGL</a> and{" "}
-            <a href="https://threejs.org/">Three.js</a>, and have made it my
-            career and hobby. I now live in San Francisco, where I organized{" "}
-            <a href="https://3dwebfest.splashthat.com/">3D Web Fest</a> for 3
-            years.
+            animation. I spent a decade in San Francisco talking about{" "}
+            <a href="https://www.khronos.org/webgl/">WebGL</a> and making things
+            with <a href="https://threejs.org/">Three.js</a>. Now I moved to Los
+            Angeles to pursue my dream at{" "}
+            <a href="https://sites.disney.com/waltdisneyimagineering/">
+              Walt Disney Imagineering
+            </a>{" "}
+            where I create interactive experiences with amazing people.
           </p>
         </div>
         <div>
